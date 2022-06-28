@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.Core\IMS.Core.csproj" />
+    <ProjectReference Include="..\IMS.Entities\IMS.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

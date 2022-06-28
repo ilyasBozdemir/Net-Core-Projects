@@ -1,4 +1,4 @@
-﻿using IMS.CreditCardService.Models;
+﻿using IMS.Web.App.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IMS.CreditCardService.Controllers
+namespace IMS.Web.App.Controllers
 {
     public class HomeController : Controller
     {

@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:59065",
-      "sslPort": 44389
+      "applicationUrl": "http://localhost:4996",
+      "sslPort": 44306
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "IMS.CreditCardService": {
+    "IMS.Web.App": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

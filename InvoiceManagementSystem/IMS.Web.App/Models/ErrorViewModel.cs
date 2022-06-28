@@ -1,6 +1,6 @@
 using System;
 
-namespace IMS.CreditCardService.Models
+namespace IMS.Web.App.Models
 {
     public class ErrorViewModel
     {

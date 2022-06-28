@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.Web.App.csproj": {}
+    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.Web.App\\IMS.Web.App.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.Web.App.csproj": {
+    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.Web.App\\IMS.Web.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.Web.App.csproj",
+        "projectUniqueName": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.Web.App\\IMS.Web.App.csproj",
         "projectName": "IMS.Web.App",
-        "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.Web.App.csproj",
+        "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.Web.App\\IMS.Web.App.csproj",
         "packagesPath": "C:\\Users\\BozdemirHome\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\obj\\",
+        "outputPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.Web.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
