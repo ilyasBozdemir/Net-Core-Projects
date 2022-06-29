@@ -1,12 +1,7 @@
 ﻿using Castle.DynamicProxy;
 using IMS.Core.Utilities.Interceptors;
 using IMS.Core.Utilities.IoC;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace IMS.Core.Aspects.Autofac.Performance

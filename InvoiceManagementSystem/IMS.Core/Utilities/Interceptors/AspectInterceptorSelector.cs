@@ -2,11 +2,8 @@
 using IMS.Core.Aspects.Autofac.Exception;
 using IMS.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IMS.Core.Utilities.Interceptors
 {
