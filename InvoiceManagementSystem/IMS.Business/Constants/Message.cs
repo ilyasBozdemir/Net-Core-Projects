@@ -10,6 +10,7 @@ namespace IMS.Business.Constants
         public static string UserNotFound = "Böyle bir kullanıcı yok.";
         public static string UserAlreadyExist = "Bu kullanıcı zate mevcut.";
         public static string WrongPassword = "Şifre hatalı! Lütfen tekrar deneyiniz.";
+
         public static string RegistrationSuccessful = "Kayıt Başarılı!";
         public static string RegistrationFailed = "Kayıt Başarısız!";
 
@@ -27,7 +28,11 @@ namespace IMS.Business.Constants
         public static string HouseMoreFloors = "Seçtiğiniz apartmanın toplam kat sayısının üstünde kat numarası girdiniz!";
 
         //Invoice Payment Messages
-
+        public static string InvoiceNotFound = "Fatura bulunamadı!";
+        public static string InvoiceAlreadyExist = "Fatura zaten mevcut.";
+        public static string InvoiceDeleted = "Fatura silindi";
+        public static string InvoiceUpdated = "Fatura güncellendi";
+        public static string InvoicePay = "Fatura ödendi";
 
         //Database Messages
         public static string DatabaseSaveError = "Veri tabanına kaydederken bir hata oluştu!";
