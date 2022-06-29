@@ -5,7 +5,7 @@ namespace IMS.DataAccess.Abstracts
     public interface IUnitOfWork : IDisposable
     {
         IApartmentRepository Apartments { get; }
-        IFlatTypeRepository FlatTypes { get; }
+        IApartmentTypeRepository FlatTypes { get; }
         IHouseRepository Houses { get; }
         IInvoicePaymentRepository InvoicePayments { get; }
         IInvoiceRepository Invoices { get; }

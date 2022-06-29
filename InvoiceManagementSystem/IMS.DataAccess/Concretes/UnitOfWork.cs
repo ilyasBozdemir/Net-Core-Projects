@@ -14,7 +14,7 @@ namespace IMS.DataAccess.Concretes
         private readonly InvoiceManagementDbContext _context;
 
         private EfApartmentRepository _apartments;
-        private EfFlatTypeRepository  _flatTypes;
+        private EfApartmentTypeRepository  _flatTypes;
         private EfHouseRepository _houses;
         private EfInvoicePaymentRepository _invoicePayments;
         private EfInvoiceRepository _invoices;
@@ -29,8 +29,8 @@ namespace IMS.DataAccess.Concretes
         }
         public IApartmentRepository Apartments
             => _apartments ?? new EfApartmentRepository(_context);
-        public IFlatTypeRepository FlatTypes
-            => _flatTypes ?? new EfFlatTypeRepository(_context);
+        public IApartmentTypeRepository FlatTypes
+            => _flatTypes ?? new EfApartmentTypeRepository(_context);
         public IHouseRepository Houses
             => _houses ?? new EfHouseRepository(_context);
         public IInvoicePaymentRepository InvoicePayments
