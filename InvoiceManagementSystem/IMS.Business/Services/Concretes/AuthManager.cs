@@ -39,7 +39,7 @@ namespace IMS.Business.Services.Concretes
 
             };
             var result = _userService.Create(user);
-            if (!result.Success)
+            if (!result._success)
                 return new Result(false, Message.RegistrationSuccessful);
             return new Result(true, Message.RegistrationFailed);
 
@@ -62,7 +62,7 @@ namespace IMS.Business.Services.Concretes
         public IDataResult<UserDto> GetUserDtoByEmail(string email)
         {
             var result = _userService.GetByEmailUser(email);
-            if (!result.Success)
+            if (!result._success)
                 return new DataResult<UserDto>(null, false, Message.UserNotFound);
             return result;
         }

@@ -8,17 +8,15 @@ namespace IMS.Core.Utilities.Results
 {
     public class Result : IResult
     {
+        public bool _success { get; }
+        public string _message { get; }
         public Result(bool success, string message) : this(success)
         {
-            Message = message;
+            _message = message;
         }
         public Result(bool success)
         {
-            Success = success;
+            _success = success;
         }
-
-        public bool Success { get; }
-
-        public string Message { get; }
     }
 }

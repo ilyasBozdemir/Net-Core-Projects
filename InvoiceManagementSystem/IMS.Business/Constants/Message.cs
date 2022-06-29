@@ -15,14 +15,23 @@ namespace IMS.Business.Constants
 
         //Apartment Messsages
         public static string ApartmentNotFound = "Daire bulunamadı!";
-        public static string ApartmentAlreadyExist = "Bu isimde zaten bir daire mevcut. Lütfen kontrol ediniz.";
+        public static string ApartmentAlreadyExist = "Bu isimde zaten bir daire mevcut.";
 
-        //Apartment Type
+        //Apartment Type Messages
         public static string ApartmentTypeAlreadyExist = "Daire tipi zaten mevcut.";
         public static string ApartmentTypeNotFound = "Daire tipi zaten mevcut.";
+
+        //House Type Messages
+        public static string HouseNotFound = "Ev bulunamadı!";
+        public static string HouseAlreadyExist = "Bu isimde zaten bir ev mevcut.";
+        public static string HouseMoreFloors = "Seçtiğiniz apartmanın toplam kat sayısının üstünde kat numarası girdiniz!";
+
+        //Invoice Payment Messages
 
 
         //Database Messages
         public static string DatabaseSaveError = "Veri tabanına kaydederken bir hata oluştu!";
+        public static string DataDeleted = "Veri silindi.";
+        public static string DataUpdated = "Veri güncellendi.";
     }
 }

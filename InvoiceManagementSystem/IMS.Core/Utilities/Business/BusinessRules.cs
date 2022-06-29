@@ -8,7 +8,7 @@ namespace IMS.Core.Utilities.Business
         {
             foreach (var result in logics)
             {
-                if (!result.Success)
+                if (!result._success)
                 {
                     return result;
                 }
