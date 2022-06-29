@@ -4,4 +4,19 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="AutoMapper\Profile\" />
+    <Folder Include="DependencyResolvers\" />
+    <Folder Include="ValidationRules\FluentValidation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.Core\IMS.Core.csproj" />
+    <ProjectReference Include="..\IMS.DataAccess\IMS.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

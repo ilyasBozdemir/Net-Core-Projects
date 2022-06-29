@@ -10,3 +10,10 @@ D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\D
 D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\net5.0\refint\IMS.Business.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\net5.0\IMS.Business.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\net5.0\ref\IMS.Business.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\bin\Debug\net5.0\IMS.Core.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\bin\Debug\net5.0\IMS.DataAccess.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\bin\Debug\net5.0\IMS.Entities.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\bin\Debug\net5.0\IMS.Core.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\bin\Debug\net5.0\IMS.DataAccess.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\bin\Debug\net5.0\IMS.Entities.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\net5.0\IMS.Business.csproj.CopyComplete
