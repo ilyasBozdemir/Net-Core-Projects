@@ -1,5 +1,0 @@
-D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\netcoreapp3.1\IMS.Business.csproj.AssemblyReference.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\netcoreapp3.1\IMS.Business.GeneratedMSBuildEditorConfig.editorconfig
-D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\netcoreapp3.1\IMS.Business.AssemblyInfoInputs.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\netcoreapp3.1\IMS.Business.AssemblyInfo.cs
-D:\GitHub\PatikaApp\Net-Core-Projects\InvoiceManagementSystem\IMS.Business\obj\Debug\netcoreapp3.1\IMS.Business.csproj.CoreCompileInputs.cache

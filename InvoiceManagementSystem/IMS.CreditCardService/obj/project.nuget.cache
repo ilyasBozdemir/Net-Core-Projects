@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bX0gn0N0a+YhWHZTwB+tgYqRzMrILXy358QkAy9x9NEOJvtDhCqDkRdQa3vZY//k7Vxn5IbuaqfgSt5HjzDunA==",
+  "dgSpecHash": "eVhSJ5hGtwxO4P0l0Fa/FL9WIK+t+jGlyKwDomPHo06VsYCGoRkiQSswfO+ODNbYQXloSyTHV20ipEa2oqSHZw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj",
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\29.06\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

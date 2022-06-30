@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj": {}
+    "D:\\GitHub\\PatikaApp\\29.06\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj": {
+    "D:\\GitHub\\PatikaApp\\29.06\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj",
+        "projectUniqueName": "D:\\GitHub\\PatikaApp\\29.06\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj",
         "projectName": "IMS.CreditCardService",
-        "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj",
+        "projectPath": "D:\\GitHub\\PatikaApp\\29.06\\InvoiceManagementSystem\\IMS.CreditCardService\\IMS.CreditCardService.csproj",
         "packagesPath": "C:\\Users\\BozdemirHome\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\InvoiceManagementSystem\\IMS.CreditCardService\\obj\\",
+        "outputPath": "D:\\GitHub\\PatikaApp\\29.06\\InvoiceManagementSystem\\IMS.CreditCardService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
