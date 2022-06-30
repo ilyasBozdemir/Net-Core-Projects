@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace IMS.Entities.DTOs
 {
     public class InvoiceDto : IDto
-    {
+    { 
         public int Id { get; set; }
         public string InvoiceType { get; set; }
         public string House { get; set; }

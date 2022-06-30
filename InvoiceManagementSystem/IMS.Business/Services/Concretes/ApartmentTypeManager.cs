@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace IMS.Business.Services.Concretes
 {
-    public class ApartmentTypeManager : ApartmentTypeService
+    public class ApartmentTypeManager : IApartmentTypeService
     {
         private readonly IApartmentTypeRepository _apartmentTypeRepository;
         private readonly IMapper _mapper;

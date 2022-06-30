@@ -1,5 +1,6 @@
 ﻿using IMS.Core.CrossCuttingConcerns.Caching;
 using IMS.Core.CrossCuttingConcerns.Caching.Microsoft;
+using IMS.Core.CrossCuttingConcerns.Logging;
 using IMS.Core.Utilities.IoC;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +20,7 @@ namespace IMS.Core.DependencyResolvers
             services.AddMemoryCache();
             services.AddSingleton<ICacheManager, MemoryCacheManager>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<ILoggerService, DBLogger>();
             services.AddSingleton<Stopwatch>();
         }
     }

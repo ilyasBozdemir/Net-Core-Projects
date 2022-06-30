@@ -19,6 +19,10 @@ namespace IMS.Core.Utilities.Messages
         public static string RegistrationSuccessful = "Kayıt Başarılı!";
         public static string RegistrationFailed = "Kayıt Başarısız!";
 
+        public static string UpdatedSuccessful = "Güncelleme Başarılı!";
+        public static string UpdatedFailed = "Güncelleme Başarısız!";
+
+
         //Apartment Messsages
         public static string ApartmentNotFound = "Daire bulunamadı!";
         public static string ApartmentAlreadyExist = "Bu isimde zaten bir daire mevcut.";
@@ -45,5 +49,6 @@ namespace IMS.Core.Utilities.Messages
         public static string DatabasePaySaveError = "Ödeme, veri tabanına kaydedilirken bir hata oluştu!";
         public static string DataDeleted = "Veri silindi.";
         public static string DataUpdated = "Veri güncellendi.";
+        public static string DataNotFound = "Veri bulunamadı.";
     }
 }
