@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace IMS.Core.Utilities.Security.JWT
 {
-    public class TokenHandler
+    public class TokenHandler: ITokenHandler
     {
         public IConfiguration Configuration { get; set; }
         public TokenHandler(IConfiguration _Configuration)

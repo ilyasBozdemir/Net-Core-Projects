@@ -1,5 +1,0 @@
-﻿
-namespace IMS.Business.Constants
-{
-  
-}

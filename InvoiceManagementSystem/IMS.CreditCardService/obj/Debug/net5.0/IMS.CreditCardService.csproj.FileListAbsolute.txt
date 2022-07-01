@@ -54,3 +54,12 @@ D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\obj\Debu
 D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\obj\Debug\net5.0\IMS.CreditCardService.pdb
 D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\obj\Debug\net5.0\IMS.CreditCardService.genruntimeconfig.cache
 D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\obj\Debug\net5.0\ref\IMS.CreditCardService.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\AutoMapper.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\Autofac.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\Autofac.Extras.DynamicProxy.dll
+D:\GitHub\PatikaApp\29.06\InvoiceManagementSystem\IMS.CreditCardService\bin\Debug\net5.0\Castle.Core.dll

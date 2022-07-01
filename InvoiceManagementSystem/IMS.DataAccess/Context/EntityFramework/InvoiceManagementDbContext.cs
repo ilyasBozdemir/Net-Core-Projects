@@ -16,7 +16,7 @@ namespace IMS.DataAccess.Context.EntityFramework
 
         public DbSet<User> Users { get; set; }
         public DbSet<Apartment> Apartments { get; set; }
-        public DbSet<FlatType> FlatTypes { get; set; }
+        public DbSet<ApartmentType> ApartmentTypes { get; set; }
         public DbSet<House> Houses { get; set; }
         public DbSet<Resident> Residents { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
@@ -30,7 +30,7 @@ namespace IMS.DataAccess.Context.EntityFramework
             modelBuilder.Entity<Resident>(ConfigureResident);
             modelBuilder.Entity<House>(ConfigureHouse);
             modelBuilder.Entity<Apartment>(ConfigureApartment);
-            modelBuilder.Entity<FlatType>(ConfigureFlatType);
+            modelBuilder.Entity<ApartmentType>(ConfigureApartmentType);
             modelBuilder.Entity<InvoiceType>(ConfigureInvoiceType);
             modelBuilder.Entity<Invoice>(ConfigureInvoice);
             modelBuilder.Entity<Log>(ConfigureLog);
@@ -57,14 +57,14 @@ namespace IMS.DataAccess.Context.EntityFramework
         {
             builder.HasKey(x => x.Id);
             builder.HasOne<Apartment>().WithMany().HasForeignKey(x => x.ApartmentId);
-            builder.HasOne<FlatType>().WithMany().HasForeignKey(x => x.FlatTypeId);
+            builder.HasOne<ApartmentType>().WithMany().HasForeignKey(x => x.FlatTypeId);
         }
 
         private void ConfigureApartment(EntityTypeBuilder<Apartment> builder)
         {
             builder.HasKey(x => x.Id);
         }
-        private void ConfigureFlatType(EntityTypeBuilder<FlatType> builder)
+        private void ConfigureApartmentType(EntityTypeBuilder<ApartmentType> builder)
         {
             builder.HasKey(x => x.Id);
         }

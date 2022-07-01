@@ -3,8 +3,6 @@ using IMS.Core.Entities.Concretes;
 using IMS.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.Extensions.Configuration;
-using System.IO;
 
 namespace IMS.DataAccess.Context.EntityFramework
 {
@@ -17,7 +15,7 @@ namespace IMS.DataAccess.Context.EntityFramework
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Apartment> Apartments { get; set; }
-        public DbSet<ApartmentType> FlatTypes { get; set; }
+        public DbSet<ApartmentType> ApartmentTypes { get; set; }
         public DbSet<House> Houses { get; set; }
         public DbSet<Resident> Residents { get; set; }
         public DbSet<Invoice> Invoices { get; set; }

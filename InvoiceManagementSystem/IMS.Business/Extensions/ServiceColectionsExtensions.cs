@@ -11,7 +11,6 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using IMS.Core.Middlewares.ConsoleLog;
 using System.Reflection;
 

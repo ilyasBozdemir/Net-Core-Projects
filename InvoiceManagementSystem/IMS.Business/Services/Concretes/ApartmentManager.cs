@@ -1,6 +1,11 @@
 ﻿using AutoMapper;
-using IMS.Business.Constants;
 using IMS.Business.Services.Abstracts;
+using IMS.Business.ValidationRules.FluentValidation;
+using IMS.Core.Aspects.Autofac.Caching;
+using IMS.Core.Aspects.Autofac.Logging;
+using IMS.Core.Aspects.Autofac.Validation;
+using IMS.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
+using IMS.Core.Utilities.Business;
 using IMS.Core.Utilities.Messages;
 using IMS.Core.Utilities.Results;
 using IMS.DataAccess.Abstracts;
@@ -19,6 +24,10 @@ namespace IMS.Business.Services.Concretes
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+        /*kullanım örneği...*/
+        [LogAspect(typeof(DatabaseLogger))]
+        [ValidationAspect(typeof(ApartmentValidator), Priority = 1)]
+        [CacheRemoveAspect("IApartmentService.Get")]
         public IResult Create(Apartment createApartment)
         {
             var apartment = _unitOfWork.Apartments.Get(x => x.Name == createApartment.Name);

@@ -1,6 +1,5 @@
 ﻿using System;
 using AutoMapper;
-using IMS.Business.Constants;
 using IMS.Business.Services.Abstracts;
 using IMS.Core.Entities.Concretes;
 using IMS.Core.Utilities.Hashing;
@@ -47,19 +46,6 @@ namespace IMS.Business.Services.Concretes
 
         }
 
-        public IDataResult<Token> LoginUser(LoginDto loginUser)
-        {
-            var user = _userService.GetByEmail(loginUser.Email).Data;
-            if (user is null)
-                return new DataResult<Token>(null, false, Message.UserNotFound);
-            if (!HashingHelper.VerifyPasswordHash(loginUser.Password, user.PasswordSalt, user.PasswordHash))
-                return new DataResult<Token>(null, false, Message.WrongPassword);
-            TokenHandler handler = new TokenHandler(_configuration);
-            Token token = handler.CreateAccessToken(user);
-            _userService.AddRefreshToken(user.Id, token.RefreshToken, token.Expiration.AddMinutes(5));
-            return new DataResult<Token>(token, true);
-        }
-
         public IDataResult<UserDto> GetUserDtoByEmail(string email)
         {
             var result = _userService.GetByEmailUser(email);
@@ -70,7 +56,15 @@ namespace IMS.Business.Services.Concretes
 
         IDataResult<Token> IAuthService.LoginUser(LoginDto loginUser)
         {
-            throw new NotImplementedException();
+            var user = _userService.GetByEmail(loginUser.Email).Data;
+            if (user is null)
+                return new DataResult<Token>(null, false, Message.UserNotFound);
+            if (!HashingHelper.VerifyPasswordHash(loginUser.Password, user.PasswordSalt, user.PasswordHash))
+                return new DataResult<Token>(null, false, Message.WrongPassword);
+            TokenHandler handler = new TokenHandler(_configuration);
+            Token token = handler.CreateAccessToken(user);
+            _userService.AddRefreshToken(user.Id, token.RefreshToken, token.Expiration.AddMinutes(5));
+            return new DataResult<Token>(token, true);
         }
     }
 }

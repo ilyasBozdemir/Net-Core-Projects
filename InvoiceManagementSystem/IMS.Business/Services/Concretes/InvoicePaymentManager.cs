@@ -1,7 +1,4 @@
-﻿
-
-using AutoMapper;
-using IMS.Business.Constants;
+﻿using AutoMapper;
 using IMS.Business.Services.Abstracts;
 using IMS.Business.Services.CreditCardService.PaymentAPI.Abstracts;
 using IMS.Business.Services.CreditCardService.PaymentService;
@@ -59,12 +56,17 @@ namespace IMS.Business.Services.Concretes
 
         public IDataResult<InvoicePayment> GetById(int id)
         {
-            throw new NotImplementedException();
+            var invoice = _paymentRepository.Get(x => x.InvoiceId == id);
+            if (invoice is null)
+                return new DataResult<InvoicePayment>(null, false, Message.InvoiceNotFound);
+            return new DataResult<InvoicePayment>(invoice, true);
+
         }
 
         public IDataResult<IEnumerable<InvoicePayment>> GetAll()
         {
-            throw new NotImplementedException();
+            var invoices = _paymentRepository.GetList();
+            return new DataResult<IEnumerable<InvoicePayment>>(invoices, true);
         }
     }
 }
