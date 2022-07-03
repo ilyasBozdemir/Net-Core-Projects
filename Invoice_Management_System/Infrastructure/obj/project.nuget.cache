@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "w5XpGfgrh/7ryIKVz2lbg94fEoS2Z88BARWn7ZjkNb/FAT2zjGFW0bQwJBTP96VG1922pPJqIZ0x/cPFE3LkXw==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0-preview.5.22301.12\\microsoft.extensions.dependencyinjection.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512"
+  ],
+  "logs": []
+}
