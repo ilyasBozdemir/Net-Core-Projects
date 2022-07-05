@@ -6662,6 +6662,7 @@
     "net6.0": [
       "Application >= 1.0.0",
       "Autofac >= 6.4.0",
+      "Microsoft.AspNet.Mvc >= 5.2.9",
       "Microsoft.Extensions.Configuration >= 7.0.0-preview.5.22301.12",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0-preview.5.22301.12",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 7.0.0-preview.5.22301.12"
@@ -6720,6 +6721,10 @@
           "Autofac": {
             "target": "Package",
             "version": "[6.4.0, )"
+          },
+          "Microsoft.AspNet.Mvc": {
+            "target": "Package",
+            "version": "[5.2.9, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",

@@ -267,6 +267,10 @@
               "target": "Package",
               "version": "[6.4.0, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0-preview.5.22301.12, )"

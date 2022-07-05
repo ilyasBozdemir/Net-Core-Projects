@@ -263,6 +263,10 @@
               "target": "Package",
               "version": "[6.4.0, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.AspNetCore.Mvc.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -351,6 +355,10 @@
             "Autofac": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -453,6 +461,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",

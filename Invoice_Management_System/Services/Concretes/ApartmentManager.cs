@@ -24,7 +24,7 @@ namespace IMS.Business.Services.Concretes
         /*kullanım örneği...*/
         [LogAspect(typeof(DatabaseLogger))]
         [ValidationAspect(typeof(ApartmentValidator), Priority = 1)]
-        [CacheRemoveAspect("IApartmentService.Get")]
+        [CacheRemoveAspect("IApartmentService.Create")]
         public IResult Create(Apartment createApartment)
         {
             var apartment = _unitOfWork.Apartments.Get(x => x.Name == createApartment.Name);
@@ -37,6 +37,10 @@ namespace IMS.Business.Services.Concretes
                 return new Result(false, Message.RegistrationFailed);
             return new Result(true, Message.RegistrationSuccessful);
         }
+
+        [LogAspect(typeof(DatabaseLogger))]
+        [ValidationAspect(typeof(ApartmentValidator), Priority = 1)]
+        [CacheRemoveAspect("IApartmentService.Delete")]
         public IResult Delete(Guid id)
         {
             var apartment = _unitOfWork.Apartments.Get(x => x.Id == id);
@@ -49,14 +53,20 @@ namespace IMS.Business.Services.Concretes
             return new Result(true);
         }
 
-       
 
+        [LogAspect(typeof(DatabaseLogger))]
+        [ValidationAspect(typeof(ApartmentValidator), Priority = 1)]
+        [CacheRemoveAspect("IApartmentService.GetAll")]
         public IDataResult<IEnumerable<Apartment>> GetAll()
         {
             var apartments = _unitOfWork.Apartments.GetList();
             return new DataResult<IEnumerable<Apartment>>(apartments, true);
             throw new Exception();
         }
+
+        [LogAspect(typeof(DatabaseLogger))]
+        [ValidationAspect(typeof(ApartmentValidator), Priority = 1)]
+        [CacheRemoveAspect("IApartmentService.GetById")]
         public IDataResult<Apartment> GetById(Guid id)
         {
             var apartment = _unitOfWork.Apartments.Get(x => x.Id == id);
@@ -65,6 +75,9 @@ namespace IMS.Business.Services.Concretes
             return new DataResult<Apartment>(apartment, true);
         }
 
+        [LogAspect(typeof(DatabaseLogger))]
+        [ValidationAspect(typeof(ApartmentValidator), Priority = 1)]
+        [CacheRemoveAspect("IApartmentService.Update")]
         public IResult Update(Guid id, Apartment updateApartment)
         {
             var apartment = _unitOfWork.Apartments.Get(x => x.Id == id);

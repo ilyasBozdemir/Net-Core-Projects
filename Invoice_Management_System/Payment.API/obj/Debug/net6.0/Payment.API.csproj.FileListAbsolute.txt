@@ -5,10 +5,17 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Payment.API.runtimeconfig.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Payment.API.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Payment.API.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.Mvc.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.Razor.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.Helpers.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.WebPages.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
