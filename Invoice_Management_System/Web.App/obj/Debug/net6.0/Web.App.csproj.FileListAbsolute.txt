@@ -1,0 +1,8 @@
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.csproj.AssemblyReference.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.AssemblyInfoInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.AssemblyInfo.cs
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.csproj.CoreCompileInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.MvcApplicationPartsAssemblyInfo.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.RazorAssemblyInfo.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.RazorAssemblyInfo.cs

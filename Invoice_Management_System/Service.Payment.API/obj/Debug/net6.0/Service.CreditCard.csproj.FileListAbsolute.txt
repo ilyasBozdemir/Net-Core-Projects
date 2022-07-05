@@ -1,0 +1,5 @@
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.CreditCard\obj\Debug\net6.0\Service.CreditCard.csproj.AssemblyReference.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.CreditCard\obj\Debug\net6.0\Service.CreditCard.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.CreditCard\obj\Debug\net6.0\Service.CreditCard.AssemblyInfoInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.CreditCard\obj\Debug\net6.0\Service.CreditCard.AssemblyInfo.cs
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.CreditCard\obj\Debug\net6.0\Service.CreditCard.csproj.CoreCompileInputs.cache

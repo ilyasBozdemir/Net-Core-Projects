@@ -1,12 +1,5 @@
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\bin\Debug\net6.0\Application.deps.json
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\bin\Debug\net6.0\Application.dll
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\bin\Debug\net6.0\Application.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.dll
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\refint\Application.dll
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.pdb
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\ref\Application.dll

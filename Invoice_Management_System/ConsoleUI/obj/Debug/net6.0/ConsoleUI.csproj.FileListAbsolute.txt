@@ -1,0 +1,5 @@
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.csproj.AssemblyReference.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.AssemblyInfoInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.AssemblyInfo.cs
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.csproj.CoreCompileInputs.cache
