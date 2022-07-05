@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6VyisspDPlxWmjdClgU3OEhhZHt9Kxe3fZXD3VcRGu3abaWJgPazjdlw/hx+NCgc6exE9xvxdF5vu+xdMWZOlg==",
+  "dgSpecHash": "2xhdiwdCCf/Pjnjrio6TJvdb+qqEgYFcCyidGBrIRhI+Bw7lxZ8HN1o3wuLoNghKmHiGQDRTQ1m+JpagkMV7ng==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.1\\autofac.extras.dynamicproxy.6.0.1.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",

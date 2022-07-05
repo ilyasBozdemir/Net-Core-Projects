@@ -1,0 +1,12 @@
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\bin\Debug\net6.0\Service.Payment.API.deps.json
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\bin\Debug\net6.0\Service.Payment.API.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\bin\Debug\net6.0\Service.Payment.API.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.csproj.AssemblyReference.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.AssemblyInfoInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.AssemblyInfo.cs
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.csproj.CoreCompileInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\refint\Service.Payment.API.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\Service.Payment.API.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Service.Payment.API\obj\Debug\net6.0\ref\Service.Payment.API.dll

@@ -32,6 +32,12 @@ namespace Persistence.Context
 
             base.OnModelCreating(modelBuilder);
         }
-    
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //optionsBuilder.UseSqlServer(DbConfiguration.ConnectionString);
+            optionsBuilder.UseSqlServer("Server=DESKTOP-GNTS7VU;Database=InvoiceManagementDB;Trusted_Connection=True;");
+            base.OnConfiguring(optionsBuilder);
+        }
+
     }
 }

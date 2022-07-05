@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "ewj33W/+cmxnUuU6CVbrYeHO3RXNjCqfkCMnZ7vPzSGN36CWOGrFhgy6SjrDN0efeZtGgAW620CLnm9zkE13yA==",
+  "dgSpecHash": "dVT1W14uwgmLe4gvGHsPJ7uNmAp02oxCW41iYrXvI8bLL9zUJRaMDKU8R7G8xNXuNKdbaYAu5XVqIzV6DVnaBQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.CreditCard\\Service.Payment.API.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "A/1cyZjIDSezcXA90r4prRdcV3Fr6EwDQliB3B99z+7hFnucHfbh33HSPlEjMsWTTuA5PezbdX4mnvMXnHUUlA==",
+  "dgSpecHash": "zZ4xVxsFuSVSxED2spHJKqA6CLdWc1lATl91jxfGb8TpqT7fDUXGpR8ipOeR+dw/53FByvF9D2GZngV++BDlZw==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.6\\microsoft.entityframeworkcore.analyzers.6.0.6.nupkg.sha512",

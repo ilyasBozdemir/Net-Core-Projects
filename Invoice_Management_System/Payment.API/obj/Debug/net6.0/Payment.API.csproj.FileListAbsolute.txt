@@ -5,6 +5,8 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Payment.API.runtimeconfig.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Payment.API.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\Payment.API.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\AutoMapper.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.Mvc.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.Razor.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Payment.API\bin\Debug\net6.0\System.Web.Helpers.dll

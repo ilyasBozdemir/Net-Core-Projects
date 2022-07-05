@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.CreditCard\\Service.Payment.API.csproj": {}
+    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.CreditCard\\Service.Payment.API.csproj": {
+    "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.CreditCard\\Service.Payment.API.csproj",
+        "projectUniqueName": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj",
         "projectName": "Service.Payment.API",
-        "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.CreditCard\\Service.Payment.API.csproj",
+        "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj",
         "packagesPath": "C:\\Users\\BozdemirHome\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.CreditCard\\obj\\",
+        "outputPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -44,6 +44,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

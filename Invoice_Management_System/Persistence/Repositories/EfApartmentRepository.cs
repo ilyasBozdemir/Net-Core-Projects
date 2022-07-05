@@ -15,7 +15,6 @@ namespace Persistence.Repositories
     {
         public EfApartmentRepository(IMSDbContext context) : base(context)
         {
-            
         }
     }
 }

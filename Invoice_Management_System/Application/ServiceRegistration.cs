@@ -6,12 +6,13 @@ using Core.CrossCuttingConcerns.Caching.Microsoft;
 using Core.CrossCuttingConcerns.Caching;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
+using Microsoft.Extensions.Configuration;
 
 namespace Application
 {
     public static class ServiceRegistration
     {
-        public static void AddApplicationServices(this IServiceCollection services)
+        public static void AddApplicationServices(this IServiceCollection services, IConfiguration Configuration = null)
         {
             //Validators > FluentValidation register
 

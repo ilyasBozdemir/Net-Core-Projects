@@ -15,12 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Apartment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBhcnRtZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Apartment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBhcnRtZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Apartment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBhcnRtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Shared/Error.cshtml]

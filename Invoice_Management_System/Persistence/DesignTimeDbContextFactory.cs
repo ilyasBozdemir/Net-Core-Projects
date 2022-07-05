@@ -9,7 +9,9 @@ namespace Persistence
         public IMSDbContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<IMSDbContext> dbContextOptionsBuilder = new();
-            dbContextOptionsBuilder.UseSqlServer(Configuration.ConnectionString);
+
+            //dbContextOptionsBuilder.UseSqlServer(DbConfiguration.ConnectionString);
+            dbContextOptionsBuilder.UseSqlServer("Server=DESKTOP-GNTS7VU;Database=InvoiceManagementDB;Trusted_Connection=True;");
             return new IMSDbContext(dbContextOptionsBuilder.Options);
         }
       
