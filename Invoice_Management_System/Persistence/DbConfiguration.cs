@@ -13,7 +13,7 @@ namespace Persistence
                 ConfigurationManager configurationManager = new();
 
                 configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(),
-                  "../../../Infrastructure/Presentation/Web.App"));
+                  "../Web.App"));
 
                 
                 configurationManager.AddJsonFile("appsettings.json");
