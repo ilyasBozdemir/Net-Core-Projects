@@ -6,6 +6,8 @@ namespace Persistence
 {
     public class DbConfiguration
     {
+        public static string activeWebProjectName 
+        { get; set; } = "Web.App";
         static public string ConnectionString
         {
             get
@@ -13,7 +15,7 @@ namespace Persistence
                 ConfigurationManager configurationManager = new();
 
                 configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(),
-                  "../Web.App"));
+                  $"../{activeWebProjectName}"));
 
                 
                 configurationManager.AddJsonFile("appsettings.json");
