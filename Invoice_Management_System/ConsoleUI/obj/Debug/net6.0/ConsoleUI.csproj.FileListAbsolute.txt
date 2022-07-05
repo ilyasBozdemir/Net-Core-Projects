@@ -1,5 +1,15 @@
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\bin\Debug\net6.0\ConsoleUI.exe
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\bin\Debug\net6.0\ConsoleUI.deps.json
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\bin\Debug\net6.0\ConsoleUI.runtimeconfig.json
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\bin\Debug\net6.0\ConsoleUI.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\bin\Debug\net6.0\ConsoleUI.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.csproj.AssemblyReference.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.AssemblyInfoInputs.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.AssemblyInfo.cs
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.csproj.CoreCompileInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\refint\ConsoleUI.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ConsoleUI.genruntimeconfig.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\ConsoleUI\obj\Debug\net6.0\ref\ConsoleUI.dll
