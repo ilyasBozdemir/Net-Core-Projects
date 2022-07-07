@@ -11,7 +11,7 @@ using System.Security.Claims;
 
 namespace Web.App.Controllers
 {
-    public class AuthController : Controller
+    public class AuthController : BaseController
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
@@ -87,7 +87,8 @@ namespace Web.App.Controllers
                 {
                     await _signInManager.SignOutAsync();
 
-                    var result = await _signInManager.PasswordSignInAsync(user, viewModel.Password, viewModel.RememberMe, true);
+                    var result =
+                        await _signInManager.PasswordSignInAsync(user, viewModel.Password, viewModel.RememberMe, true);
 
                     if (result.Succeeded)
                     {
@@ -99,7 +100,7 @@ namespace Web.App.Controllers
                         {
                             return Redirect(returnUrl.ToString() ?? "/");
                         }
-                        return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("Index", "Home");
                     }
                     else if (result.RequiresTwoFactor)
                     {

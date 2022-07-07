@@ -13,15 +13,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddPersistenceServices(builder.Configuration);
-builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddApplicationServices(builder.Configuration); 
 builder.Services.AddBusinessServices(builder.Configuration);
+builder.Services.AddInfrastructureServices(builder.Configuration);
+
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-builder.Host.ConfigureContainer<ContainerBuilder>
+builder.Host
+    .ConfigureContainer<ContainerBuilder>
     (builder => builder.RegisterModule(new AutofacBusinessModule()));
 
 var app = builder.Build();

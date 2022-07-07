@@ -10,7 +10,7 @@ using Domain.Entities;
 using Infrastructure.Messages.Messages;
 using Services.Abstracts;
 
-namespace IMS.Business.Services.Concretes
+namespace Services.Concretes
 {
     public class ApartmentManager : IApartmentService
     {

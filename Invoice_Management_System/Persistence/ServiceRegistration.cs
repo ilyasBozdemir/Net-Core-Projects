@@ -1,11 +1,7 @@
-﻿using Application.Helpers;
-using Application.Repositories;
+﻿using Application.Repositories;
 using Domain.Entities.Identity;
 using Infrastructure.IdentitySettings;
-using Infrastructure.IdentitySettings.Requirements;
 using Infrastructure.IdentitySettings.Validators;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,10 +18,6 @@ namespace Persistence
             serviceCollection.AddDbContext<IMSDbContext>
                 (options => options.UseSqlServer(DbConfiguration.ConnectionString));
 
-
-            serviceCollection.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-            serviceCollection.AddScoped<EmailHelper>();
-            serviceCollection.AddScoped<TwoFactorAuthenticationService>();
 
             serviceCollection.AddIdentity<User, Role>(options =>
             {
@@ -50,74 +42,7 @@ namespace Persistence
               .AddErrorDescriber<ErrorDescriber>()
               .AddEntityFrameworkStores<IMSDbContext>();
 
-            serviceCollection.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = new PathString("/User/Login");
-                options.LogoutPath = new PathString("/User/Logout");
-                options.AccessDeniedPath = new PathString("/Home/AccessDenied");
-
-                options.Cookie = new()
-                {
-                    Name = "IdentityCookie",
-                    HttpOnly = true,
-                    SameSite = SameSiteMode.Lax,
-                    SecurePolicy = CookieSecurePolicy.Always
-                };
-                options.SlidingExpiration = true;
-                options.ExpireTimeSpan = TimeSpan.FromDays(30);
-            });
-
-            serviceCollection.AddAuthentication()
-                .AddFacebook(options =>
-                {
-                    options.AppId = Configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
-                    options.AppSecret = Configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
-                    // options.CallbackPath = new PathString("/User/FacebookCallback");
-                })
-                .AddGoogle(options =>
-                {
-                    options.ClientId = Configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
-                    options.ClientSecret = Configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
-                })
-                .AddMicrosoftAccount(options =>
-                {
-                    options.ClientId = Configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
-                    options.ClientSecret = Configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
-                });
-
-            serviceCollection.AddAuthorization(options =>
-            {
-                options.AddPolicy("AdminPolicy", policy =>
-                {
-                    policy.RequireClaim("Admin", OperationClaims.Admin!);
-                });
-
-                options.AddPolicy("UserPolicy", policy =>
-                {
-                    policy.RequireClaim("User", OperationClaims.User!);
-                });
-
-                options.AddPolicy("AnonymousPolicy", policy =>
-                {
-                    policy.RequireClaim("Anonymous", OperationClaims.Anonymous!);
-                });
-
-                options.AddPolicy("FreeTrialPolicy", policy =>
-                {
-                    policy.Requirements.Add(new FreeTrialExpireRequirement());
-                });
-
-                options.AddPolicy("AtLeast18Policy", policy =>
-                {
-                    policy.AddRequirements(new MinimumAgeRequirement(18));
-                });
-            });
-
-
             serviceCollection.AddScoped<DbInitializer>();
-
-            serviceCollection.AddScoped<IClaimsTransformation, ClaimsTransformation>();
-
 
             serviceCollection.AddScoped<IApartmentRepository, EfApartmentRepository>();
 

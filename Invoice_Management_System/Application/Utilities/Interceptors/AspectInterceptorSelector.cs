@@ -1,4 +1,6 @@
-﻿using Castle.DynamicProxy;
+﻿using Application.CrossCuttingConcerns.Logging.Log4Net.Loggers;
+using Castle.DynamicProxy;
+using Application.Aspects.Autofac.Exception;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,14 @@ namespace Application.Utilities.Interceptors
     {
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
-            throw new NotImplementedException();
+            var classAttributes = type.GetCustomAttributes<MethodInterceptionBaseAttribute>(true).ToList();
+            var methodAttributes =
+                type.GetMethod(method.Name).GetCustomAttributes<MethodInterceptionBaseAttribute>(true);
+            classAttributes.AddRange(methodAttributes);
+            classAttributes.Add(new ExceptionLogAspect(typeof(FileLogger)));
+
+
+            return classAttributes.OrderBy(x => x.Priority).ToArray();
         }
     }
 }

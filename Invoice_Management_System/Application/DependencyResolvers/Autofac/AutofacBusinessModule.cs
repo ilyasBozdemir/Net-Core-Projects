@@ -9,7 +9,7 @@ namespace Application.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
-            //builder.RegisterType<ApartmentManager>().As<IApartmentService>();
+           // builder.RegisterType<Services.Concretes.ApartmentManager>().As<Services.AbstractsIApartmentService>();
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();

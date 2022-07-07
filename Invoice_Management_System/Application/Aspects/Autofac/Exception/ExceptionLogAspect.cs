@@ -4,7 +4,7 @@ using Application.Utilities.Interceptors;
 using Application.Utilities.Messages;
 using Castle.DynamicProxy;
 
-namespace Core.Aspects.Autofac.Exception
+namespace Application.Aspects.Autofac.Exception
 {
     public class ExceptionLogAspect : MethodInterception
     {
