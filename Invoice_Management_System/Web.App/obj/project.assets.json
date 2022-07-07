@@ -354,6 +354,18 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.AspNetCore.Authentication.Twitter/6.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Twitter.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Twitter.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Authorization/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -4199,6 +4211,7 @@
           "Microsoft.AspNetCore.Authentication.Facebook": "6.0.6",
           "Microsoft.AspNetCore.Authentication.Google": "6.0.6",
           "Microsoft.AspNetCore.Authentication.MicrosoftAccount": "6.0.6",
+          "Microsoft.AspNetCore.Authentication.Twitter": "6.0.6",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.10",
           "Microsoft.Extensions.Configuration": "7.0.0-preview.5.22301.12",
@@ -4696,6 +4709,21 @@
         "lib/net6.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.xml",
         "microsoft.aspnetcore.authentication.microsoftaccount.6.0.6.nupkg.sha512",
         "microsoft.aspnetcore.authentication.microsoftaccount.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Twitter/6.0.6": {
+      "sha512": "yNz1VQiJM1pgqz05NqSptj9CHnz4Oa5eEY3MGB+4A0Gqpq5IzRicVzJMxUfU01AFAbAYNucfC+2dozbxK9ZFlQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.twitter/6.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.Twitter.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.Twitter.xml",
+        "microsoft.aspnetcore.authentication.twitter.6.0.6.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.twitter.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {

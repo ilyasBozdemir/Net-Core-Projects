@@ -310,3 +310,5 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debu
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Facebook.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\log4net.config
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Twitter.dll

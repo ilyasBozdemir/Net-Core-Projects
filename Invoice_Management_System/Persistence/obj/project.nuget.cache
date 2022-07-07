@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "luiTQrrNh0uoKHNH148fvZalnJSDaEB8TsvORVQphnWxxNZqSurc30nBBx4J4pC/AlrFXQOALuZuCT+JKCYg2Q==",
+  "dgSpecHash": "ncnPxset2A+WH+xikEL9Gtf0FQtp2opttaXdxaJA3mbuQ4tST1cZ4xkmt+xM0eXygbnRAKlNrm9t2ahlfcTGFw==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\6.0.6\\microsoft.aspnetcore.authentication.facebook.6.0.6.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.6\\microsoft.aspnetcore.authentication.google.6.0.6.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.microsoftaccount\\6.0.6\\microsoft.aspnetcore.authentication.microsoftaccount.6.0.6.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.twitter\\6.0.6\\microsoft.aspnetcore.authentication.twitter.6.0.6.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.6\\microsoft.aspnetcore.cryptography.internal.6.0.6.nupkg.sha512",

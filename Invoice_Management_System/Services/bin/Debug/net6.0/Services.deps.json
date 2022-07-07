@@ -216,6 +216,14 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Twitter/6.0.6": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Twitter.dll": {
+            "assemblyVersion": "6.0.6.0",
+            "fileVersion": "6.0.622.26805"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
@@ -1547,6 +1555,7 @@
           "Microsoft.AspNetCore.Authentication.Facebook": "6.0.6",
           "Microsoft.AspNetCore.Authentication.Google": "6.0.6",
           "Microsoft.AspNetCore.Authentication.MicrosoftAccount": "6.0.6",
+          "Microsoft.AspNetCore.Authentication.Twitter": "6.0.6",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.10",
           "Microsoft.Extensions.Configuration": "7.0.0-preview.5.22301.12",
@@ -1697,6 +1706,13 @@
       "sha512": "sha512-obaFD//jlsxLHOZPfF7uYOZy5XFwKvvnlhe+hXg7E0yQ1tSkdhoEDsKh3F+fHjEAJZHkLHNfbRYpyJkJBUB4fQ==",
       "path": "microsoft.aspnetcore.authentication.microsoftaccount/6.0.6",
       "hashPath": "microsoft.aspnetcore.authentication.microsoftaccount.6.0.6.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Twitter/6.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yNz1VQiJM1pgqz05NqSptj9CHnz4Oa5eEY3MGB+4A0Gqpq5IzRicVzJMxUfU01AFAbAYNucfC+2dozbxK9ZFlQ==",
+      "path": "microsoft.aspnetcore.authentication.twitter/6.0.6",
+      "hashPath": "microsoft.aspnetcore.authentication.twitter.6.0.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {
       "type": "package",

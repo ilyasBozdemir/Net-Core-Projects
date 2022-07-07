@@ -9,6 +9,7 @@ using Services.Abstracts;
 
 namespace Web.App.Controllers
 {
+    [Authorize]
     public class ApartmentController : BaseController
     {
         private readonly IApartmentService _apartmentService;
@@ -18,7 +19,7 @@ namespace Web.App.Controllers
             _apartmentService = apartmentService;
             _mapper = mapper;
         }
-
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var result = _apartmentService.GetAll();
@@ -30,7 +31,7 @@ namespace Web.App.Controllers
             return BadRequest();
         }
 
-       
+        [Authorize]
         public IActionResult Create()
         {
             return View();

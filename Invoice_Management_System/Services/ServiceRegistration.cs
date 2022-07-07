@@ -50,27 +50,32 @@ namespace Services
                         //Üretilecek token değerinin uygulamamıza ait bir değer olduğunu ifade eden security key verisinin doğrulanmasıdır.
                         ValidAudience = configuration["Token:Audience"],
                         ValidIssuer = configuration["Token:Issuer"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"]))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
+                        .GetBytes(configuration["Token:SecurityKey"]))
                     };
                 });
-
-            // serviceCollection.AddAuthentication()
-            //.AddFacebook(options =>
-            //{
-            //    options.AppId = Configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
-            //    options.AppSecret = Configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
-            //    // options.CallbackPath = new PathString("/User/FacebookCallback");
-            //})
-            //.AddGoogle(options =>
-            //{
-            //    options.ClientId = Configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
-            //    options.ClientSecret = Configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
-            //})
-            //.AddMicrosoftAccount(options =>
-            //{
-            //    options.ClientId = Configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
-            //    options.ClientSecret = Configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
-            //});
+           // serviceCollection.AddAuthentication()
+           //.AddFacebook(options =>
+           //{
+           //    options.AppId = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
+           //    options.AppSecret = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
+           //    // options.CallbackPath = new PathString("/User/FacebookCallback");
+           //})
+           // .AddTwitter(options =>
+           // {
+           //     options.ConsumerKey = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerKey");
+           //     options.ConsumerSecret = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerSecret");
+           // })
+           //.AddGoogle(options =>
+           //{
+           //    options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
+           //    options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
+           //})
+           //.AddMicrosoftAccount(options =>
+           //{
+           //    options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
+           //    options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
+           //});
 
             serviceCollection.ConfigureApplicationCookie(options =>
             {
