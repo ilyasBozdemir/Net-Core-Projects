@@ -303,3 +303,10 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debu
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.genruntimeconfig.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\ref\Web.App.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.MvcApplicationPartsAssemblyInfo.cs
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Mapster.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Mapster.Core.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Mapster.DependencyInjection.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll

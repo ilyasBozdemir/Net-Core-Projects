@@ -1,10 +1,24 @@
-﻿using Domain.Entities.Identity;
+﻿using Infrastructure.Enums;
 using Microsoft.AspNetCore.Identity;
+
 
 namespace Domain.Entities.Identity
 {
     public class User: IdentityUser<Guid>
     {
+        public TwoFactorType TwoFactorType
+        {
+            get; set;
+        }
+        public DateTime BirthDay
+        {
+            get; set;
+        }
+        public Gender Gender
+        {
+            get; set;
+        }
+        public DateTime CreatedOn { get; set; }
         public override Guid Id 
         { 
             get => base.Id;
@@ -86,7 +100,8 @@ namespace Domain.Entities.Identity
             get => base.AccessFailedCount; 
             set => base.AccessFailedCount = value;
         }
-        public string OperationClaim { get; set; } = OperationClaims.User;
+        public string OperationClaim { get; set; } 
+            = OperationClaims.User;
     }
 
 }

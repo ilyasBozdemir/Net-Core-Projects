@@ -12,3 +12,6 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\obj\Debug
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\obj\Debug\net6.0\Domain.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\bin\Debug\net6.0\Infrastructure.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\bin\Debug\net6.0\Infrastructure.pdb
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Domain\obj\Debug\net6.0\Domain.csproj.CopyComplete

@@ -19,6 +19,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -36,8 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\Storage\Azure\" />
-    <Folder Include="Abstractions\Storage\Local\" />
+    <Folder Include="Interfaces\Storage\Azure\" />
+    <Folder Include="Interfaces\Storage\Local\" />
     <Folder Include="Wrappers\" />
   </ItemGroup>
 
@@ -47,6 +48,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

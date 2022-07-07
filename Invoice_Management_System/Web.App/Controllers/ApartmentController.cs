@@ -2,6 +2,7 @@
 using AutoMapper;
 using Domain.Common;
 using Domain.Entities;
+using Domain.Entities.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstracts;

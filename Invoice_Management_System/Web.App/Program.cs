@@ -51,7 +51,8 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "Default",
          pattern: "{controller=Auth}/{action=Login}/{id?}");
-        
+    //pattern: "{controller=Home}/{action=Login}/{id?}");
+
 
     endpoints.MapControllerRoute(
       name: "areas",

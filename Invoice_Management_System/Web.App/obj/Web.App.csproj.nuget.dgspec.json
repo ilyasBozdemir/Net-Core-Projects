@@ -35,6 +35,9 @@
             "projectReferences": {
               "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Domain\\Domain.csproj": {
                 "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Domain\\Domain.csproj"
+              },
+              "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -92,6 +95,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.AspNetCore.Razor": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -286,7 +293,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -334,6 +345,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0-preview.5.22301.12, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             }
           },
           "imports": [
@@ -386,6 +401,9 @@
             "projectReferences": {
               "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Application\\Application.csproj": {
                 "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Application\\Application.csproj"
+              },
+              "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -415,6 +433,18 @@
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
               "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -631,6 +661,18 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0-pre03, )"
+            },
+            "Mapster.Core": {
+              "target": "Package",
+              "version": "[1.2.1-pre02, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",

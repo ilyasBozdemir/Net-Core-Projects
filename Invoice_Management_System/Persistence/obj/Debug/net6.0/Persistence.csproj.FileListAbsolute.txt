@@ -17,3 +17,5 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Persistence\obj\
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Persistence\obj\Debug\net6.0\Persistence.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Persistence\obj\Debug\net6.0\ref\Persistence.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Persistence\bin\Debug\net6.0\Infrastructure.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Persistence\bin\Debug\net6.0\Infrastructure.pdb

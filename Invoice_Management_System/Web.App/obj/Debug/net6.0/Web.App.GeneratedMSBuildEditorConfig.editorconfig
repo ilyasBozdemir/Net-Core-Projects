@@ -27,8 +27,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBhcnRtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/TwoFactorAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxUd29GYWN0b3JBdXRoZW50aWNhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/TwoFactorLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxUd29GYWN0b3JMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Auth/TwoFactorType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxUd29GYWN0b3JUeXBlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GitHub/PatikaApp/Net-Core-Projects/Invoice_Management_System/Web.App/Views/Home/Index.cshtml]

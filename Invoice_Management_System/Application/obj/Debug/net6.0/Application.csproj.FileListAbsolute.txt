@@ -15,3 +15,5 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\obj\Debug\net6.0\ref\Application.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\bin\Debug\net6.0\Infrastructure.dll
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Application\bin\Debug\net6.0\Infrastructure.pdb
