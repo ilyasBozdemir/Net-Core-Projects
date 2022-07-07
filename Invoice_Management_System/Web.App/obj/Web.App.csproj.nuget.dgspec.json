@@ -89,6 +89,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -120,6 +124,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0-preview.5.22301.12, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "log4net": {
               "target": "Package",
@@ -225,6 +233,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0-preview.5.22301.12, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             }
           },
           "imports": [
@@ -404,6 +416,10 @@
               "target": "Package",
               "version": "[5.2.9, )"
             },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -486,6 +502,9 @@
               },
               "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Infrastructure\\Infrastructure.csproj"
+              },
+              "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -507,6 +526,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             }
           },
           "imports": [

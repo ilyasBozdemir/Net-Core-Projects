@@ -29,14 +29,13 @@ namespace Web.App.Controllers
             return BadRequest();
         }
 
-        [Authorize(Roles = OperationClaims.Admin)]
+       
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = OperationClaims.Admin)]
         public IActionResult Create(CreateApartmentViewModel createApartmentVM)
         {
             Apartment model = _mapper.Map<Apartment>(createApartmentVM);
@@ -44,7 +43,7 @@ namespace Web.App.Controllers
             SuccessAlert(result.Message);
             return Redirect(Request.Headers["Referer"].ToString());
         }
-        [Authorize(Roles = OperationClaims.Admin)]
+
         public IActionResult Delete(Guid id)
         {
             var result = _apartmentService.Delete(id);
@@ -56,7 +55,6 @@ namespace Web.App.Controllers
             DangerAlert(result.Message);
             return RedirectToAction("Index");
         }
-        [Authorize(Roles = OperationClaims.Admin)]
         public IActionResult Edit(Guid id)
         {
             var result = _apartmentService.GetById(id);
@@ -70,7 +68,6 @@ namespace Web.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = OperationClaims.Admin)]
         public IActionResult Edit(Guid id, UpdateApartmentViewModel model)
         {
             Apartment mapObj = _mapper.Map<Apartment>(model);

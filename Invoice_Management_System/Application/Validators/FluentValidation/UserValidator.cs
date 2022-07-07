@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Entities.Identity;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
