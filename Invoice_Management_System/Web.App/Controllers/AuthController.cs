@@ -315,7 +315,7 @@ namespace Web.App.Controllers
                     {
                         await _userManager.UpdateSecurityStampAsync(user);
 
-                        return RedirectToAction("Login", "User");
+                        return RedirectToAction("Login", "Auth");
                     }
                     else
                     {
@@ -342,6 +342,20 @@ namespace Web.App.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+        public async Task<IActionResult> CheckEmail(string email, string token)
+        {
+            //var user = await _userManager.FindByIdAsync(userId);
+            //if (user != null)
+            //{
+            //    var result = await _userManager.ConfirmEmailAsync(user, token);
+            //    if (result.Succeeded)
+            //    {
+            //        return RedirectToAction("Login");
+            //    }
+            //}
+            return RedirectToAction("Index", "Home");
+        }
+
         public async Task<IActionResult> TwoFactorType()
         {
             var user = await _userManager.FindByNameAsync(User.Identity?.Name);
@@ -361,7 +375,7 @@ namespace Web.App.Controllers
 
             if (viewModel.TwoFactorType == Infrastructure.Enums. TwoFactorType.Authenticator)
             {
-                return RedirectToAction("TwoFactorAuthenticator", "User");
+                return RedirectToAction("TwoFactorAuthenticator", "Auth");
             }
             return RedirectToAction("Index", "Home");
         }
@@ -402,26 +416,26 @@ namespace Web.App.Controllers
         }
         public IActionResult FacebookLogin(string returnUrl)
         {
-            var redirectUrl = Url.Action("ExternalResponse", "User", new { ReturnUrl = returnUrl });
+            var redirectUrl = Url.Action("ExternalResponse", "Auth", new { ReturnUrl = returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties("Facebook", redirectUrl);
             return new ChallengeResult("Facebook", properties);
         }
         public IActionResult TwitterLogin(string returnUrl)
         {
-            var redirectUrl = Url.Action("ExternalResponse", "User", new { ReturnUrl = returnUrl });
+            var redirectUrl = Url.Action("ExternalResponse", "Auth", new { ReturnUrl = returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties("Twitter", redirectUrl);
             return new ChallengeResult("Twitter", properties);
         }
         public IActionResult GoogleLogin(string returnUrl)
         {
-            var redirectUrl = Url.Action("ExternalResponse", "User", new { ReturnUrl = returnUrl });
+            var redirectUrl = Url.Action("ExternalResponse", "Auth", new { ReturnUrl = returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties("Google", redirectUrl);
             return new ChallengeResult("Google", properties);
         }
 
         public IActionResult MicrosoftLogin(string returnUrl)
         {
-            var redirectUrl = Url.Action("ExternalResponse", "User", new { ReturnUrl = returnUrl });
+            var redirectUrl = Url.Action("ExternalResponse", "Auth", new { ReturnUrl = returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties("Microsoft", redirectUrl);
             return new ChallengeResult("Microsoft", properties);
         }

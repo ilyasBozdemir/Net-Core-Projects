@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Authorization;
 using Infrastructure.IdentitySettings;
 using Application.Helpers;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Services
 {
@@ -36,14 +37,18 @@ namespace Services
             serviceCollection.AddTransient<IApartmentService, ApartmentManager>();
 
 
-            serviceCollection.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            serviceCollection.AddAuthentication(options =>
+            {
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
                 .AddJwtBearer("Admin", options =>
                 {
-                    options.TokenValidationParameters = new()
+                    options.TokenValidationParameters = new TokenValidationParameters()
                     {
                         ValidateAudience = true,
                         //Oluşturulacak token değerini kimlerin/hangi originlerin/sitelerin kullanıcı belirlediğimiz değerdir
-                        ValidateIssuer = true, 
+                        ValidateIssuer = true,
                         //Oluşturulacak token değerini kimin dağıttını ifade edeceğimiz alandır.
                         ValidateLifetime = true,
                         //Oluşturulan token değerinin süresini kontrol edecek olan doğrulamadır.
@@ -51,33 +56,40 @@ namespace Services
                         //Üretilecek token değerinin uygulamamıza ait bir değer olduğunu ifade eden security key verisinin doğrulanmasıdır.
                         ValidAudience = configuration["Token:Audience"],
                         ValidIssuer = configuration["Token:Issuer"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
-                        .GetBytes(configuration["Token:SecurityKey"]))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
+                        ClockSkew = TimeSpan.Zero
+                    };
+
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnTokenValidated = ctx => Task.CompletedTask,
+                        OnAuthenticationFailed = ctx => Task.CompletedTask
                     };
                 });
+/*
+           .AddFacebook(options =>
+           {
+               options.AppId = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
+               options.AppSecret = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
+               // options.CallbackPath = new PathString("/User/FacebookCallback");
+           })
+            .AddTwitter(options =>
+            {
+                options.ConsumerKey = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerKey");
+                options.ConsumerSecret = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerSecret");
+            })
+           .AddGoogle(options =>
+           {
+               options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
+               options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
+           })
+           .AddMicrosoftAccount(options =>
+           {
+               options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
+               options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
+           });
 
-           // serviceCollection.AddAuthentication()
-           //.AddFacebook(options =>
-           //{
-           //    options.AppId = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
-           //    options.AppSecret = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
-           //    // options.CallbackPath = new PathString("/User/FacebookCallback");
-           //})
-           // .AddTwitter(options =>
-           // {
-           //     options.ConsumerKey = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerKey");
-           //     options.ConsumerSecret = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerSecret");
-           // })
-           //.AddGoogle(options =>
-           //{
-           //    options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
-           //    options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
-           //})
-           //.AddMicrosoftAccount(options =>
-           //{
-           //    options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
-           //    options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
-           //});
+            */
 
             serviceCollection.ConfigureApplicationCookie(options =>
             {
@@ -100,8 +112,50 @@ namespace Services
 
             serviceCollection.AddDistributedMemoryCache();
 
-            //serviceCollection.AddMvc();
-            //serviceCollection.AddMvcCore();
+
+            serviceCollection.AddMvc()
+                .AddRazorPagesOptions(
+                options =>
+                {
+                    options.Conventions.AuthorizeFolder("/");
+
+
+                    //options.Conventions.AuthorizeFolder("/Account/Manage");
+
+                    //options.Conventions.AuthorizeAreaPage("Admin", "/Manage/Accounts");
+
+                  
+                    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPassword");
+                   
+                    //options.Conventions.AllowAnonymousToPage("/Auth/CheckEmail");
+         
+                    //options.Conventions.AllowAnonymousToPage("/Auth/ConfirmEmail");
+                  
+                    //options.Conventions.AllowAnonymousToPage("/Auth/ExternalLogin");
+
+                    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPassword");
+                
+                    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPasswordConfirmation");
+
+                    //options.Conventions.AllowAnonymousToPage("/Account/Index");
+            
+                    //options.Conventions.AllowAnonymousToPage("/Auth/Lockout");
+               
+                    //options.Conventions.AllowAnonymousToPage("/Auth/Login");
+                   
+                    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWith2fa");
+
+                    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWithRecoveryCode");
+                  
+                    //options.Conventions.AllowAnonymousToPage("/Auth/Logout");
+                  
+                    //options.Conventions.AllowAnonymousToPage("/Auth/Register");
+
+                    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPasswordConfirmation");
+
+                   // options.Conventions.AllowAnonymousToPage("/stripewebhook");
+
+                });
 
 
             serviceCollection.AddAuthorization(options =>
@@ -131,6 +185,7 @@ namespace Services
                     policy.AddRequirements(new MinimumAgeRequirement(18));
                 });
             });
+
         }
     }
 }
