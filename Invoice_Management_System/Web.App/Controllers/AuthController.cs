@@ -27,6 +27,7 @@ namespace Web.App.Controllers
         }
 
         public IActionResult Register() => View();
+
         [HttpPost]
         public async Task<IActionResult> Register(SignUpViewModel viewModel)
         {
@@ -45,6 +46,7 @@ namespace Web.App.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(user, viewModel.Password);
+
                 if (result.Succeeded)
                 {
                     var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
