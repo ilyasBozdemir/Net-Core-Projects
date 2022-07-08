@@ -44,13 +44,18 @@ namespace Services
 
             serviceCollection.AddTransient<IApartmentService, ApartmentManager>();
 
-            serviceCollection.AddMvc(config =>
+            if (false)//proje kapsamında yetkilendirme verir
             {
-                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                serviceCollection.AddMvc(config =>
+                {
+                    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
 
-                config.Filters.Add(new AuthorizeFilter(policy));
+                    config.Filters.Add(new AuthorizeFilter(policy));
 
-            });
+                });
+            }
+           
+
 
             serviceCollection.AddMvc();
 
