@@ -1533,6 +1533,7 @@
           "Autofac": "6.4.0",
           "Domain": "1.0.0",
           "Microsoft.AspNet.Mvc": "5.2.9",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.Extensions.Configuration": "7.0.0-preview.5.22301.12",

@@ -15,7 +15,14 @@ using Microsoft.AspNetCore.Authorization;
 using Infrastructure.IdentitySettings;
 using Application.Helpers;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Authentication.OAuth;
+using System.Security.Claims;
+using Persistence.Context;
+using Microsoft.AspNetCore.Authentication.Facebook;
+using Microsoft.AspNetCore.Authentication.Twitter;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication.MicrosoftAccount;
 
 namespace Services
 {
@@ -28,6 +35,7 @@ namespace Services
             serviceCollection.AddScoped<IAuthorizationHandler, MinimumAgeHandler>();
 
             serviceCollection.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+
             serviceCollection.AddScoped<EmailHelper>();
             serviceCollection.AddScoped<TwoFactorAuthenticationService>();
 
@@ -36,6 +44,15 @@ namespace Services
 
             serviceCollection.AddTransient<IApartmentService, ApartmentManager>();
 
+            serviceCollection.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+
+                config.Filters.Add(new AuthorizeFilter(policy));
+
+            });
+
+            serviceCollection.AddMvc();
 
             serviceCollection.AddAuthentication(options =>
             {
@@ -66,30 +83,12 @@ namespace Services
                         OnAuthenticationFailed = ctx => Task.CompletedTask
                     };
                 });
-/*
-           .AddFacebook(options =>
-           {
-               options.AppId = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
-               options.AppSecret = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
-               // options.CallbackPath = new PathString("/User/FacebookCallback");
-           })
-            .AddTwitter(options =>
-            {
-                options.ConsumerKey = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerKey");
-                options.ConsumerSecret = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerSecret");
-            })
-           .AddGoogle(options =>
-           {
-               options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
-               options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
-           })
-           .AddMicrosoftAccount(options =>
-           {
-               options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
-               options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
-           });
 
-            */
+
+            serviceCollection
+                .AddAuthentication()
+                .AddExternalLoginOptions(configuration, serviceCollection);//custom method
+
 
             serviceCollection.ConfigureApplicationCookie(options =>
             {
@@ -110,53 +109,66 @@ namespace Services
                 options.ExpireTimeSpan = TimeSpan.FromDays(30);
             });
 
-            serviceCollection.AddDistributedMemoryCache();
+            //serviceCollection.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            //    .AddCookie(options =>
+            //    {
+            //        options.LoginPath = new PathString("/Auth/Login");
+            //        options.LogoutPath = new PathString("/Auth/Logout");
+            //        options.AccessDeniedPath = new PathString("/Auth/AccessDenied");
+
+            //        options.Cookie = new()
+            //        {
+            //            Name = "IdentityCookie",
+            //            HttpOnly = true,
+            //            SameSite = SameSiteMode.Lax,
+            //            SecurePolicy = CookieSecurePolicy.Always,
+            //            IsEssential = true
+            //        };
+                //});
 
 
-            serviceCollection.AddMvc()
-                .AddRazorPagesOptions(
-                options =>
-                {
-                    options.Conventions.AuthorizeFolder("/");
+            // serviceCollection.AddMvc().AddRazorPagesOptions(
+            //options =>
+            //{
+            //    options.Conventions.AuthorizeFolder("/");
 
 
-                    //options.Conventions.AuthorizeFolder("/Account/Manage");
+            //    //options.Conventions.AuthorizeFolder("/Account/Manage");
 
-                    //options.Conventions.AuthorizeAreaPage("Admin", "/Manage/Accounts");
+            //    //options.Conventions.AuthorizeAreaPage("Admin", "/Manage/Accounts");
 
-                  
-                    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPassword");
-                   
-                    //options.Conventions.AllowAnonymousToPage("/Auth/CheckEmail");
-         
-                    //options.Conventions.AllowAnonymousToPage("/Auth/ConfirmEmail");
-                  
-                    //options.Conventions.AllowAnonymousToPage("/Auth/ExternalLogin");
 
-                    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPassword");
-                
-                    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPasswordConfirmation");
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPassword");
 
-                    //options.Conventions.AllowAnonymousToPage("/Account/Index");
-            
-                    //options.Conventions.AllowAnonymousToPage("/Auth/Lockout");
-               
-                    //options.Conventions.AllowAnonymousToPage("/Auth/Login");
-                   
-                    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWith2fa");
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/CheckEmail");
 
-                    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWithRecoveryCode");
-                  
-                    //options.Conventions.AllowAnonymousToPage("/Auth/Logout");
-                  
-                    //options.Conventions.AllowAnonymousToPage("/Auth/Register");
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/ConfirmEmail");
 
-                    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPasswordConfirmation");
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/ExternalLogin");
 
-                   // options.Conventions.AllowAnonymousToPage("/stripewebhook");
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPassword");
 
-                });
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPasswordConfirmation");
 
+            //    //options.Conventions.AllowAnonymousToPage("/Account/Index");
+
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/Lockout");
+
+            //    options.Conventions.AllowAnonymousToPage("/Auth/Login");
+
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWith2fa");
+
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWithRecoveryCode");
+
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/Logout");
+
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/Register");
+
+            //    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPasswordConfirmation");
+
+            //    // options.Conventions.AllowAnonymousToPage("/stripewebhook");
+
+            //});
 
             serviceCollection.AddAuthorization(options =>
             {
@@ -185,6 +197,85 @@ namespace Services
                     policy.AddRequirements(new MinimumAgeRequirement(18));
                 });
             });
+
+        }
+    
+        public static void AddExternalLoginOptions(this AuthenticationBuilder _authenticationBuilder, IConfiguration configuration, IServiceCollection serviceCollection)
+        {
+            bool facebookState = false,
+                 twitterState = false,
+                 googleState = false,
+                 microsoftState = false;
+
+            
+            Action<FacebookOptions> facebookOptions = delegate (FacebookOptions options)
+            {
+                options.AppId = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
+                options.AppSecret = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppSecret");
+                if (!string.IsNullOrEmpty(options.AppId) && !string.IsNullOrEmpty(options.AppSecret))
+                {
+                    facebookState = true;
+                }
+                options.CallbackPath = new PathString("/User/FacebookLoginCallback");
+
+                options.Events = new OAuthEvents
+                {
+                    OnTicketReceived = ctx =>
+                    {
+                        var db = ctx.HttpContext.RequestServices.GetRequiredService<IMSDbContext>();
+
+                        var claims = new List<Claim>
+                         {
+                             new Claim(ClaimTypes.Role, "Admin")
+                         };
+                        var appIdentity = new ClaimsIdentity(claims);
+                        ctx.Principal?.AddIdentity(appIdentity);
+
+                        return Task.CompletedTask;
+                    },
+                };
+            };
+            Action<TwitterOptions> twitterOptions = delegate (TwitterOptions options)
+            {
+                options.ConsumerKey = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerKey");
+                options.ConsumerSecret = configuration.GetValue<string>("ExternalLoginProviders:Twitter:ConsumerSecret");
+                if (!string.IsNullOrEmpty(options.ConsumerKey) && !string.IsNullOrEmpty(options.ConsumerSecret))
+                {
+                    twitterState = true;
+                }
+            };
+
+            Action<GoogleOptions> googleOptions = delegate (GoogleOptions options)
+            {
+                options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientId");
+                options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Google:ClientSecret");
+                if (!string.IsNullOrEmpty(options.ClientId) && !string.IsNullOrEmpty(options.ClientSecret))
+                {
+                    googleState = true;
+                }
+            };
+
+            Action<MicrosoftAccountOptions> microsoftAccountOptions = delegate (MicrosoftAccountOptions options)
+            {
+                options.ClientId = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientId");
+                options.ClientSecret = configuration.GetValue<string>("ExternalLoginProviders:Microsoft:ClientSecret");
+                if (!string.IsNullOrEmpty(options.ClientId) && !string.IsNullOrEmpty(options.ClientSecret))
+                {
+                    microsoftState = true;
+                }
+            };
+
+            if (facebookState)
+                _authenticationBuilder.AddFacebook(facebookOptions);
+
+            if (twitterState)
+                _authenticationBuilder.AddTwitter(twitterOptions);
+
+            if (googleState)
+                _authenticationBuilder.AddGoogle(googleOptions);
+
+            if (microsoftState)
+                _authenticationBuilder.AddMicrosoftAccount(microsoftAccountOptions);
 
         }
     }

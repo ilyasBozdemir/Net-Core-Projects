@@ -5,6 +5,7 @@ using Infrastructure.Enums;
 using Infrastructure.IdentitySettings;
 using Mapster;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -26,9 +27,11 @@ namespace Web.App.Controllers
             _twoFactorAuthService = twoFactorAuthService;
         }
 
+        [Authorize(Roles = OperationClaims.Anonymous)]
         public IActionResult Register() => View();
-
-        [HttpPost]
+      
+       
+        [HttpPost, Authorize(Roles = OperationClaims.Anonymous)]
         public async Task<IActionResult> Register(SignUpViewModel viewModel)
         {
             #region Register
@@ -50,7 +53,7 @@ namespace Web.App.Controllers
                 if (result.Succeeded)
                 {
                     var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    var confirmationLink = Url.Action("ConfirmEmail", "User", new
+                    var confirmationLink = Url.Action("ConfirmEmail", "Auth", new
                     {
                         userId = user.Id,
                         token = confirmationToken
@@ -71,13 +74,16 @@ namespace Web.App.Controllers
 
             #endregion
         }
+
+        [Authorize(Policy = "AdminPolicy")]
         public IActionResult Login(string? returnUrl)
         {
             if (returnUrl != null)
                 TempData["ReturnUrl"] = returnUrl;
             return View();
         }
-        [HttpPost]
+
+        [HttpPost, Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Login(SignInViewModel viewModel)
         {
             #region Login
@@ -268,7 +274,7 @@ namespace Web.App.Controllers
                 {
                     var passwordResetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-                    var passwordLink = Url.Action("ResetPassword", "User", new
+                    var passwordLink = Url.Action("ResetPassword", "Auth", new
                     {
                         userId = user.Id,
                         token = passwordResetToken
@@ -294,7 +300,7 @@ namespace Web.App.Controllers
         {
             if (userId == null || token == null)
             {
-                return RedirectToAction("Login", "User");
+                return RedirectToAction("Login", "Auth");
             }
 
             return View(new ResetPasswordViewModel
@@ -441,6 +447,20 @@ namespace Web.App.Controllers
             var properties = _signInManager.ConfigureExternalAuthenticationProperties("Microsoft", redirectUrl);
             return new ChallengeResult("Microsoft", properties);
         }
+
+        [HttpGet]
+        [Route("signinfacebookcallback")]
+        public async Task<ActionResult> FacebookLoginCallback()
+        {
+            var result = await HttpContext.AuthenticateAsync();
+            if (!result.Succeeded)
+                return RedirectToAction("Login");
+            else
+                return BadRequest();
+            
+        }
+
+
         public async Task<IActionResult> ExternalResponse(string ReturnUrl = "/")
         {
             var loginInfo = await _signInManager.GetExternalLoginInfoAsync();
