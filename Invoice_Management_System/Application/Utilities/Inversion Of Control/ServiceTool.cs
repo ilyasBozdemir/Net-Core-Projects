@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Application.Utilities.Messages
+namespace Application.Utilities.Inversion_Of_Control
 {
     public static class ServiceTool
     {

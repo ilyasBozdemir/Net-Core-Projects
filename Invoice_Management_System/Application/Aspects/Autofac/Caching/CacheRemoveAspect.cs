@@ -1,5 +1,5 @@
 ﻿using Application.Utilities.Interceptors;
-using Application.Utilities.Messages;
+using Application.Utilities.Inversion_Of_Control;
 using Castle.DynamicProxy;
 using Core.CrossCuttingConcerns.Caching;
 using Microsoft.Extensions.DependencyInjection;

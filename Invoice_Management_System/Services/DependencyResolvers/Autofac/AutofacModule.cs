@@ -1,15 +1,18 @@
 ﻿using Application.Utilities.Interceptors;
-using  Autofac;
+using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
+using Services.Abstracts;
+using Services.Concretes;
 
-namespace Application.DependencyResolvers.Autofac
+namespace Services.DependencyResolvers.Autofac
 {
-    public class AutofacBusinessModule : Module
+    public class AutofacModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
-           // builder.RegisterType<Services.Concretes.ApartmentManager>().As<Services.AbstractsIApartmentService>();
+
+            builder.RegisterType<ApartmentManager>().As<IApartmentService>();
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();

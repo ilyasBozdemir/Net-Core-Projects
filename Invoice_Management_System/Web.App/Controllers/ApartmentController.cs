@@ -1,15 +1,12 @@
 ﻿using Application.ViewModels.Apartment;
 using AutoMapper;
-using Domain.Common;
 using Domain.Entities;
-using Domain.Entities.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstracts;
 
 namespace Web.App.Controllers
 {
-    [Authorize]
     public class ApartmentController : BaseController
     {
         private readonly IApartmentService _apartmentService;
@@ -25,7 +22,8 @@ namespace Web.App.Controllers
             var result = _apartmentService.GetAll();
             if (result.Success)
             {
-                IEnumerable<GetApartmentsViewModel> obj = _mapper.Map<IEnumerable<GetApartmentsViewModel>>(result.Data);
+                IEnumerable<GetApartmentsViewModel> obj = 
+                    _mapper.Map<IEnumerable<GetApartmentsViewModel>>(result.Data);
                 return View(obj);
             }
             return BadRequest();

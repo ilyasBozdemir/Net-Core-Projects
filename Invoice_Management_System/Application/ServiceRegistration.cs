@@ -7,6 +7,7 @@ using Core.CrossCuttingConcerns.Caching;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 using Microsoft.Extensions.Configuration;
+using Application.Utilities.Inversion_Of_Control;
 
 namespace Application
 {
@@ -33,11 +34,14 @@ namespace Application
 
 
             //
+
+            ServiceTool.Create(services);
+
             services.AddMemoryCache();
             services.AddSingleton<ICacheManager, MemoryCacheManager>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<Stopwatch>();
-
+           
 
         }
     }

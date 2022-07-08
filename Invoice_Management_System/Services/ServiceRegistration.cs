@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Infrastructure.IdentitySettings;
 using Application.Helpers;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Services
 {
@@ -54,6 +55,7 @@ namespace Services
                         .GetBytes(configuration["Token:SecurityKey"]))
                     };
                 });
+
            // serviceCollection.AddAuthentication()
            //.AddFacebook(options =>
            //{
@@ -79,20 +81,27 @@ namespace Services
 
             serviceCollection.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = new PathString("/User/Login");
-                options.LogoutPath = new PathString("/User/Logout");
-                options.AccessDeniedPath = new PathString("/Home/AccessDenied");
+                options.LoginPath = new PathString("/Auth/Login");
+                options.LogoutPath = new PathString("/Auth/Logout");
+                options.AccessDeniedPath = new PathString("/Auth/AccessDenied");
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
 
                 options.Cookie = new()
                 {
                     Name = "IdentityCookie",
                     HttpOnly = true,
                     SameSite = SameSiteMode.Lax,
-                    SecurePolicy = CookieSecurePolicy.Always
+                    SecurePolicy = CookieSecurePolicy.Always,
+                    IsEssential = true
                 };
                 options.SlidingExpiration = true;
                 options.ExpireTimeSpan = TimeSpan.FromDays(30);
             });
+
+            serviceCollection.AddDistributedMemoryCache();
+
+            //serviceCollection.AddMvc();
+            //serviceCollection.AddMvcCore();
 
 
             serviceCollection.AddAuthorization(options =>

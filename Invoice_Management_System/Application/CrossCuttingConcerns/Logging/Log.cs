@@ -1,16 +1,25 @@
 ﻿using Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.CrossCuttingConcerns.Logging
 {
     public class Log : BaseEntity
     {
-        public virtual int Id { get; set; }
-        public DateTime DateTime { get; set; } = DateTime.Now;
+        private DateTime dateTime;
+
+        public DateTime DateTime
+        {
+            get { return dateTime; }
+            set { dateTime = DateTime.Now; }
+        }
+        public override Guid Id 
+        { 
+            get; set;
+        }
+        public override DateTime UpdatedDate 
+        { 
+            get => base.UpdatedDate;
+            set => base.UpdatedDate = value; 
+        }
         public string Message { get; set; }
 
     }

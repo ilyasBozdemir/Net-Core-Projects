@@ -3,7 +3,7 @@ using Application;
 using Infrastructure;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Application.DependencyResolvers.Autofac;
+using Services.DependencyResolvers.Autofac;
 using System.Reflection;
 using Services;
 using Persistence.Extensions.DbInitializer;
@@ -22,9 +22,8 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-builder.Host
-    .ConfigureContainer<ContainerBuilder>
-    (builder => builder.RegisterModule(new AutofacBusinessModule()));
+builder.Host.ConfigureContainer<ContainerBuilder>
+    (builder => builder.RegisterModule(new AutofacModule()));
 
 var app = builder.Build();
 
@@ -52,8 +51,8 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
         name: "Default",
-         pattern: "{controller=Auth}/{action=Login}/{id?}");
-    //pattern: "{controller=Home}/{action=Login}/{id?}");
+        pattern: "{controller=Auth}/{action=Login}/{id?}");
+      //pattern: "{controller=Home}/{action=Login}/{id?}");
 
 
     endpoints.MapControllerRoute(

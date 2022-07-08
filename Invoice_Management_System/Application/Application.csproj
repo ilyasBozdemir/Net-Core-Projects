@@ -37,6 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="CrossCuttingConcerns\Logging\Serilog\" />
+    <Folder Include="CrossCuttingConcerns\Logging\NLog\" />
     <Folder Include="Interfaces\Storage\Azure\" />
     <Folder Include="Interfaces\Storage\Local\" />
     <Folder Include="Wrappers\" />
