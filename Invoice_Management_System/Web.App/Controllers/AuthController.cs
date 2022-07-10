@@ -42,6 +42,8 @@ namespace Web.App.Controllers
                 var user = new User
                 {
                     UserName = viewModel.UserName,
+                    Name=viewModel.Name,
+                    Surname=viewModel.Surname,
                     Email = viewModel.Email,
                     Gender = viewModel.Gender,
                     BirthDay = viewModel.BirthDay,
@@ -76,6 +78,13 @@ namespace Web.App.Controllers
                         .ToList()
                         .ForEach(f => ModelState
                         .AddModelError(string.Empty, f.Description));
+
+                    var exceptionText = result
+                        .Errors
+                        .Aggregate("User Creation Failed - Identity Exception. Errors were: \n\r\n\r",
+                        (current, error) => current + (" - " + error + "\n\r"));
+                    throw new Exception(exceptionText);
+                    
                 }
             }
             return View(viewModel);
@@ -561,7 +570,7 @@ namespace Web.App.Controllers
 
         //    var passportClaims = new List<Claim>
         //    {
-        //        new(ClaimTypes.Name, "Boz-demir12345"),
+        //        new(ClaimTypes.Name, "Bozdemir.12345"),
         //        new("ValidUntil", "2042-07"),
         //        new(ClaimTypes.Country, "Turkey")
         //    };
