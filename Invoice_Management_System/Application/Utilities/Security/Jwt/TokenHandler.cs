@@ -51,7 +51,7 @@ namespace Application.Utilities.Security.Jwt
             claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
             claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
             claims.Add(new Claim(ClaimTypes.Name, $"{user.FullName}"));
-            claims.Add(new Claim(ClaimTypes.Role, user.OperationClaim));
+            //claims.Add(new Claim(ClaimTypes.Role, user.OperationClaim));
 
             return claims;
         }

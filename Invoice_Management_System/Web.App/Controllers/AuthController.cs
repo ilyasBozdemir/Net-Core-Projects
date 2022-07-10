@@ -1,5 +1,6 @@
 ﻿using Application.Helpers;
 using Application.ViewModels.Auth;
+using Core.Utilities.Security.Hashing;
 using Domain.Entities.Identity;
 using Domain.Enums;
 using Infrastructure.IdentitySettings;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Text;
 
 namespace Web.App.Controllers
 {
@@ -36,19 +38,29 @@ namespace Web.App.Controllers
         public async Task<IActionResult> Register(SignUpViewModel viewModel)
         {
             #region Register
+            byte[] passwordHash, passwordSalt;
 
+            HashingHelper.CreatePasswordHash(viewModel.Password, out passwordHash, out passwordSalt);
+            /*
+            byte[] bytes = Encoding.ASCII.GetBytes(someString);
+            string someString = Encoding.ASCII.GetString(bytes);
+            */
             if (ModelState.IsValid)
             {
                 var user = new User
                 {
                     UserName = viewModel.UserName,
-                    Name=viewModel.Name,
-                    Surname=viewModel.Surname,
+                    Name = viewModel.Name,
+                    Surname = viewModel.Surname,
+                    PasswordHash= Encoding.ASCII.GetString(passwordHash),
+                    PasswordSalt = Encoding.ASCII.GetString(passwordSalt),
+                    //PhoneNumber=
                     Email = viewModel.Email,
                     Gender = viewModel.Gender,
                     BirthDay = viewModel.BirthDay,
                     TwoFactorType = Domain.Enums.TwoFactorType.None,
-                    CreatedOn = DateTime.UtcNow
+                    CreatedOn = DateTime.UtcNow,
+
                 };
 
                 var result = await _userManager.CreateAsync(user, viewModel.Password);
@@ -81,10 +93,10 @@ namespace Web.App.Controllers
 
                     var exceptionText = result
                         .Errors
-                        .Aggregate("User Creation Failed - Identity Exception. Errors were: \n\r\n\r",
-                        (current, error) => current + (" - " + error + "\n\r"));
-                    throw new Exception(exceptionText);
-                    
+                        .Aggregate("User Creation Failed - Identity Exception. Errors were: \n\r",
+                        (current, error) => current + ($" - {error}\n\r"));
+                    throw 
+                        new Exception(exceptionText);
                 }
             }
             return View(viewModel);
@@ -108,6 +120,7 @@ namespace Web.App.Controllers
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(viewModel.Email);
+
                 if (user != null)
                 {
                     await _signInManager.SignOutAsync();
@@ -120,11 +133,9 @@ namespace Web.App.Controllers
                         await _userManager.ResetAccessFailedCountAsync(user);
                         await _userManager.SetLockoutEndDateAsync(user, null);
 
-                        var returnUrl = TempData["ReturnUrl"];
+                        string returnUrl = TempData["ReturnUrl"] as string;
                         if (returnUrl != null)
-                        {
-                            return Redirect(returnUrl.ToString() ?? "/");
-                        }
+                            return Redirect(returnUrl ?? "/");
                         return RedirectToAction("Index", "Home");
                     }
                     else if (result.RequiresTwoFactor)
@@ -146,10 +157,13 @@ namespace Web.App.Controllers
                         ModelState.AddModelError(string.Empty, "Invalid e-mail or password.");
                     }
                 }
-                else
+                else if(user == null)
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid e-mail or password.");
+                    return Unauthorized();
                 }
+                //{
+                //    ModelState.AddModelError(string.Empty, "Invalid e-mail or password.");
+                //}
             }
             return View(viewModel);
             #endregion

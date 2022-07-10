@@ -52,9 +52,6 @@ namespace Domain.Entities.Identity
             get; 
             set; 
         } = true;
-       
-        public string OperationClaim { get; set; } 
-            = OperationClaims.User;
     }
 
 }
