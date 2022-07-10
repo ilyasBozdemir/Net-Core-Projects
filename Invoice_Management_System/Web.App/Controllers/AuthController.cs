@@ -12,6 +12,7 @@ using System.Security.Claims;
 
 namespace Web.App.Controllers
 {
+    [AllowAnonymous]
     public class AuthController : BaseController
     {
         private readonly UserManager<User> _userManager;
@@ -29,13 +30,13 @@ namespace Web.App.Controllers
 
         //[Authorize(Roles = OperationClaims.Anonymous)]
         public IActionResult Register() => View();
-      
-       
+
+
         [HttpPost, /*Authorize(Roles = OperationClaims.Anonymous)*/]
         public async Task<IActionResult> Register(SignUpViewModel viewModel)
         {
             #region Register
-       
+
             if (ModelState.IsValid)
             {
                 var user = new User
@@ -49,7 +50,6 @@ namespace Web.App.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(user, viewModel.Password);
-               
 
                 if (result.Succeeded)
                 {
@@ -68,12 +68,15 @@ namespace Web.App.Controllers
                     });
 
                     return RedirectToAction("Login");
+
                 }
                 else if (!result.Succeeded)
+                {
                     result.Errors
                         .ToList()
                         .ForEach(f => ModelState
                         .AddModelError(string.Empty, f.Description));
+                }
             }
             return View(viewModel);
 
@@ -366,7 +369,8 @@ namespace Web.App.Controllers
             //        return RedirectToAction("Login");
             //    }
             //}
-            return RedirectToAction("Index", "Home");
+            //return RedirectToAction("Index", "Home");
+            throw new Exception("");
         }
 
         public async Task<IActionResult> TwoFactorType()
@@ -386,7 +390,7 @@ namespace Web.App.Controllers
             await _userManager.UpdateAsync(user);
             await _userManager.SetTwoFactorEnabledAsync(user, user.TwoFactorType != Domain.Enums.TwoFactorType.None);
 
-            if (viewModel.TwoFactorType == Domain.Enums. TwoFactorType.Authenticator)
+            if (viewModel.TwoFactorType == Domain.Enums.TwoFactorType.Authenticator)
             {
                 return RedirectToAction("TwoFactorAuthenticator", "Auth");
             }
@@ -462,7 +466,7 @@ namespace Web.App.Controllers
                 return RedirectToAction("Login");
             else
                 return BadRequest();
-            
+
         }
 
 
@@ -545,30 +549,31 @@ namespace Web.App.Controllers
 
             return View("Error", errors);
         }
-        public async Task ClaimsPrincipalExample()
-        {
-            var licenceClaims = new List<Claim>
-            {
-                new(ClaimTypes.Name, "ilyas"),
-                new("LicenceType", "B"),
-                new("ValidUntil", "2022-09"),
-            };
 
-            var passportClaims = new List<Claim>
-            {
-                new(ClaimTypes.Name, "ilyas"),
-                new("ValidUntil", "2042-07"),
-                new(ClaimTypes.Country, "Turkey")
-            };
+        //public async Task ClaimsPrincipalExample()
+        //{
+        //    var licenceClaims = new List<Claim>
+        //    {
+        //        new(ClaimTypes.Name, "ilyas"),
+        //        new("LicenceType", "B"),
+        //        new("ValidUntil", "2022-09"),
+        //    };
 
-            var licenceIdentity = new ClaimsIdentity(licenceClaims, "LicenceIdentity");
-            var passportIdentity = new ClaimsIdentity(passportClaims, "PassportIdentity");
+        //    var passportClaims = new List<Claim>
+        //    {
+        //        new(ClaimTypes.Name, "Boz-demir12345"),
+        //        new("ValidUntil", "2042-07"),
+        //        new(ClaimTypes.Country, "Turkey")
+        //    };
 
-            var userPrincipal = new ClaimsPrincipal(new[] { licenceIdentity, passportIdentity });
+        //    var licenceIdentity = new ClaimsIdentity(licenceClaims, "LicenceIdentity");
+        //    var passportIdentity = new ClaimsIdentity(passportClaims, "PassportIdentity");
 
-            var authenticationProperties = new AuthenticationProperties { IsPersistent = true };
+        //    var userPrincipal = new ClaimsPrincipal(new[] { licenceIdentity, passportIdentity });
 
-            await HttpContext.SignInAsync(userPrincipal, authenticationProperties);
-        }
+        //    var authenticationProperties = new AuthenticationProperties { IsPersistent = true };
+
+        //    await HttpContext.SignInAsync(userPrincipal, authenticationProperties);
+        //}
     }
 }

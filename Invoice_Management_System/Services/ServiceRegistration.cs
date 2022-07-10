@@ -8,7 +8,6 @@ using Persistence.UnitOfWorks;
 using Services.Abstracts;
 using System.Text;
 using Microsoft.AspNetCore.Http;
-using Domain.Entities.Identity;
 using Infrastructure.IdentitySettings.Requirements;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -44,7 +43,7 @@ namespace Services
 
             serviceCollection.AddTransient<IApartmentService, ApartmentManager>();
 
-            if (false)//proje kapsamında yetkilendirme verir
+            if (true)//proje kapsamında yetkilendirme verir
             {
                 serviceCollection.AddMvc(config =>
                 {
@@ -54,17 +53,15 @@ namespace Services
 
                 });
             }
-           
+
             serviceCollection.AddMvc();
             if (false)
             {
-
                 serviceCollection.AddAuthentication(options =>
                 {
                     options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                })
-                    .AddJwtBearer("Admin", options =>
+                }).AddJwtBearer("Admin", options =>
                     {
                         options.TokenValidationParameters = new TokenValidationParameters()
                         {
@@ -114,50 +111,14 @@ namespace Services
                 options.ExpireTimeSpan = TimeSpan.FromDays(30);
             });
 
-      
-
-            // serviceCollection.AddMvc().AddRazorPagesOptions(
-            //options =>
-            //{
-            //    options.Conventions.AuthorizeFolder("/");
-
-
-            //    //options.Conventions.AuthorizeFolder("/Account/Manage");
-
-            //    //options.Conventions.AuthorizeAreaPage("Admin", "/Manage/Accounts");
-
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPassword");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/CheckEmail");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/ConfirmEmail");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/ExternalLogin");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPassword");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/ForgotPasswordConfirmation");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Account/Index");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/Lockout");
-
-            //    options.Conventions.AllowAnonymousToPage("/Auth/Login");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWith2fa");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/LoginWithRecoveryCode");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/Logout");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/Register");
-
-            //    //options.Conventions.AllowAnonymousToPage("/Auth/ResetPasswordConfirmation");
-
-            //    // options.Conventions.AllowAnonymousToPage("/stripewebhook");
-
-            //});
+            //serviceCollection.AddMvc().AddRazorPagesOptions(
+            //           options =>
+            //           {
+            //               options.Conventions.AuthorizeFolder("/");
+            //               options.Conventions.AuthorizeFolder("/Account/Manage");
+            //               options.Conventions.AuthorizeAreaPage("Admin", "/Manage/Accounts");
+            //               options.Conventions.AllowAnonymousToPage("/Auth/ResetPassword");
+            //           });
 
             //serviceCollection.AddAuthorization(options =>
             //{
@@ -188,7 +149,7 @@ namespace Services
             //});
 
         }
-    
+
         public static void AddExternalLoginOptions(this AuthenticationBuilder _authenticationBuilder, IConfiguration configuration, IServiceCollection serviceCollection)
         {
             bool facebookState = false,
@@ -196,7 +157,7 @@ namespace Services
                  googleState = false,
                  microsoftState = false;
 
-            
+
             Action<FacebookOptions> facebookOptions = delegate (FacebookOptions options)
             {
                 options.AppId = configuration.GetValue<string>("ExternalLoginProviders:Facebook:AppId");
