@@ -55,40 +55,40 @@ namespace Services
                 });
             }
            
-
-
             serviceCollection.AddMvc();
-
-            serviceCollection.AddAuthentication(options =>
+            if (false)
             {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-                .AddJwtBearer("Admin", options =>
+
+                serviceCollection.AddAuthentication(options =>
                 {
-                    options.TokenValidationParameters = new TokenValidationParameters()
+                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                    .AddJwtBearer("Admin", options =>
                     {
-                        ValidateAudience = true,
-                        //Oluşturulacak token değerini kimlerin/hangi originlerin/sitelerin kullanıcı belirlediğimiz değerdir
-                        ValidateIssuer = true,
-                        //Oluşturulacak token değerini kimin dağıttını ifade edeceğimiz alandır.
-                        ValidateLifetime = true,
-                        //Oluşturulan token değerinin süresini kontrol edecek olan doğrulamadır.
-                        ValidateIssuerSigningKey = true,
-                        //Üretilecek token değerinin uygulamamıza ait bir değer olduğunu ifade eden security key verisinin doğrulanmasıdır.
-                        ValidAudience = configuration["Token:Audience"],
-                        ValidIssuer = configuration["Token:Issuer"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
-                        ClockSkew = TimeSpan.Zero
-                    };
+                        options.TokenValidationParameters = new TokenValidationParameters()
+                        {
+                            ValidateAudience = true,
+                            //Oluşturulacak token değerini kimlerin/hangi originlerin/sitelerin kullanıcı belirlediğimiz değerdir
+                            ValidateIssuer = true,
+                            //Oluşturulacak token değerini kimin dağıttını ifade edeceğimiz alandır.
+                            ValidateLifetime = true,
+                            //Oluşturulan token değerinin süresini kontrol edecek olan doğrulamadır.
+                            ValidateIssuerSigningKey = true,
+                            //Üretilecek token değerinin uygulamamıza ait bir değer olduğunu ifade eden security key verisinin doğrulanmasıdır.
+                            ValidAudience = configuration["Token:Audience"],
+                            ValidIssuer = configuration["Token:Issuer"],
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
+                            ClockSkew = TimeSpan.Zero
+                        };
 
-                    options.Events = new JwtBearerEvents
-                    {
-                        OnTokenValidated = ctx => Task.CompletedTask,
-                        OnAuthenticationFailed = ctx => Task.CompletedTask
-                    };
-                });
-
+                        options.Events = new JwtBearerEvents
+                        {
+                            OnTokenValidated = ctx => Task.CompletedTask,
+                            OnAuthenticationFailed = ctx => Task.CompletedTask
+                        };
+                    });
+            }
 
             serviceCollection
                 .AddAuthentication()
@@ -114,23 +114,7 @@ namespace Services
                 options.ExpireTimeSpan = TimeSpan.FromDays(30);
             });
 
-            //serviceCollection.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //    .AddCookie(options =>
-            //    {
-            //        options.LoginPath = new PathString("/Auth/Login");
-            //        options.LogoutPath = new PathString("/Auth/Logout");
-            //        options.AccessDeniedPath = new PathString("/Auth/AccessDenied");
-
-            //        options.Cookie = new()
-            //        {
-            //            Name = "IdentityCookie",
-            //            HttpOnly = true,
-            //            SameSite = SameSiteMode.Lax,
-            //            SecurePolicy = CookieSecurePolicy.Always,
-            //            IsEssential = true
-            //        };
-                //});
-
+      
 
             // serviceCollection.AddMvc().AddRazorPagesOptions(
             //options =>
@@ -175,33 +159,33 @@ namespace Services
 
             //});
 
-            serviceCollection.AddAuthorization(options =>
-            {
-                options.AddPolicy("AdminPolicy", policy =>
-                {
-                    policy.RequireClaim("Admin", OperationClaims.Admin!);
-                });
+            //serviceCollection.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("AdminPolicy", policy =>
+            //    {
+            //        policy.RequireClaim("Admin", OperationClaims.Admin!);
+            //    });
 
-                options.AddPolicy("UserPolicy", policy =>
-                {
-                    policy.RequireClaim("User", OperationClaims.User!);
-                });
+            //    options.AddPolicy("UserPolicy", policy =>
+            //    {
+            //        policy.RequireClaim("User", OperationClaims.User!);
+            //    });
 
-                options.AddPolicy("AnonymousPolicy", policy =>
-                {
-                    policy.RequireClaim("Anonymous", OperationClaims.Anonymous!);
-                });
+            //    options.AddPolicy("AnonymousPolicy", policy =>
+            //    {
+            //        policy.RequireClaim("Anonymous", OperationClaims.Anonymous!);
+            //    });
 
-                options.AddPolicy("FreeTrialPolicy", policy =>
-                {
-                    policy.Requirements.Add(new FreeTrialExpireRequirement());
-                });
+            //    options.AddPolicy("FreeTrialPolicy", policy =>
+            //    {
+            //        policy.Requirements.Add(new FreeTrialExpireRequirement());
+            //    });
 
-                options.AddPolicy("AtLeast18Policy", policy =>
-                {
-                    policy.AddRequirements(new MinimumAgeRequirement(18));
-                });
-            });
+            //    options.AddPolicy("AtLeast18Policy", policy =>
+            //    {
+            //        policy.AddRequirements(new MinimumAgeRequirement(18));
+            //    });
+            //});
 
         }
     

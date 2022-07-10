@@ -1,7 +1,7 @@
 ﻿using Application.Helpers;
 using Application.ViewModels.Auth;
 using Domain.Entities.Identity;
-using Infrastructure.Enums;
+using Domain.Enums;
 using Infrastructure.IdentitySettings;
 using Mapster;
 using Microsoft.AspNetCore.Authentication;
@@ -27,11 +27,11 @@ namespace Web.App.Controllers
             _twoFactorAuthService = twoFactorAuthService;
         }
 
-        [Authorize(Roles = OperationClaims.Anonymous)]
+        //[Authorize(Roles = OperationClaims.Anonymous)]
         public IActionResult Register() => View();
       
        
-        [HttpPost, Authorize(Roles = OperationClaims.Anonymous)]
+        [HttpPost, /*Authorize(Roles = OperationClaims.Anonymous)*/]
         public async Task<IActionResult> Register(SignUpViewModel viewModel)
         {
             #region Register
@@ -44,11 +44,12 @@ namespace Web.App.Controllers
                     Email = viewModel.Email,
                     Gender = viewModel.Gender,
                     BirthDay = viewModel.BirthDay,
-                    TwoFactorType = Infrastructure.Enums.TwoFactorType.None,
+                    TwoFactorType = Domain.Enums.TwoFactorType.None,
                     CreatedOn = DateTime.UtcNow
                 };
 
                 var result = await _userManager.CreateAsync(user, viewModel.Password);
+               
 
                 if (result.Succeeded)
                 {
@@ -68,14 +69,18 @@ namespace Web.App.Controllers
 
                     return RedirectToAction("Login");
                 }
-                result.Errors.ToList().ForEach(f => ModelState.AddModelError(string.Empty, f.Description));
+                else if (!result.Succeeded)
+                    result.Errors
+                        .ToList()
+                        .ForEach(f => ModelState
+                        .AddModelError(string.Empty, f.Description));
             }
             return View(viewModel);
 
             #endregion
         }
 
-        [Authorize(Policy = "AdminPolicy")]
+        //[Authorize(Policy = "AdminPolicy")]
         public IActionResult Login(string? returnUrl)
         {
             if (returnUrl != null)
@@ -83,7 +88,7 @@ namespace Web.App.Controllers
             return View();
         }
 
-        [HttpPost, Authorize(Policy = "AdminPolicy")]
+        [HttpPost,/* Authorize(Policy = "AdminPolicy")*/]
         public async Task<IActionResult> Login(SignInViewModel viewModel)
         {
             #region Login
@@ -156,7 +161,7 @@ namespace Web.App.Controllers
         {
             var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
 
-            if (user.TwoFactorType == Infrastructure.Enums.TwoFactorType.Authenticator)
+            if (user.TwoFactorType == Domain.Enums.TwoFactorType.Authenticator)
             {
                 var result = viewModel.IsRecoveryCode ? await _signInManager.TwoFactorRecoveryCodeSignInAsync(viewModel.VerificationCode) : await _signInManager.TwoFactorAuthenticatorSignInAsync(viewModel.VerificationCode, true, false);
                 if (result.Succeeded)
@@ -165,7 +170,7 @@ namespace Web.App.Controllers
                 }
                 ModelState.AddModelError(string.Empty, "Verification code is invalid.");
             }
-            else if (user.TwoFactorType == Infrastructure.Enums.TwoFactorType.Email || user.TwoFactorType == Infrastructure.Enums.TwoFactorType.Sms)
+            else if (user.TwoFactorType == Domain.Enums.TwoFactorType.Email || user.TwoFactorType == Domain.Enums.TwoFactorType.Sms)
             {
                 // Handle verificationCode control flow
 
@@ -379,9 +384,9 @@ namespace Web.App.Controllers
             var user = await _userManager.FindByNameAsync(User.Identity?.Name);
             user.TwoFactorType = viewModel.TwoFactorType;
             await _userManager.UpdateAsync(user);
-            await _userManager.SetTwoFactorEnabledAsync(user, user.TwoFactorType != Infrastructure.Enums.TwoFactorType.None);
+            await _userManager.SetTwoFactorEnabledAsync(user, user.TwoFactorType != Domain.Enums.TwoFactorType.None);
 
-            if (viewModel.TwoFactorType == Infrastructure.Enums. TwoFactorType.Authenticator)
+            if (viewModel.TwoFactorType == Domain.Enums. TwoFactorType.Authenticator)
             {
                 return RedirectToAction("TwoFactorAuthenticator", "Auth");
             }
@@ -390,7 +395,7 @@ namespace Web.App.Controllers
         public async Task<IActionResult> TwoFactorAuthenticator()
         {
             var user = await _userManager.FindByNameAsync(User.Identity?.Name);
-            if (user.TwoFactorEnabled && user.TwoFactorType == Infrastructure.Enums.TwoFactorType.Authenticator)
+            if (user.TwoFactorEnabled && user.TwoFactorType == Domain.Enums.TwoFactorType.Authenticator)
             {
                 var authenticatorKey = await _userManager.GetAuthenticatorKeyAsync(user);
                 if (authenticatorKey == null)

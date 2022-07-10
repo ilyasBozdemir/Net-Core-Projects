@@ -94,7 +94,7 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.AspNetCore.Razor": {
               "target": "Package",

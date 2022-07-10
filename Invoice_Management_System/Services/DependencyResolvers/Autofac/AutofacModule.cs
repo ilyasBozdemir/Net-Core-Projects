@@ -2,6 +2,7 @@
 using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
+using Microsoft.AspNetCore.Http;
 using Services.Abstracts;
 using Services.Concretes;
 
@@ -13,7 +14,7 @@ namespace Services.DependencyResolvers.Autofac
         {
 
             builder.RegisterType<ApartmentManager>().As<IApartmentService>();
-
+            builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

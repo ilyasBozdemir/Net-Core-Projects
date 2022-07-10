@@ -7,7 +7,6 @@ using Services.DependencyResolvers.Autofac;
 using System.Reflection;
 using Services;
 using Persistence.Extensions.DbInitializer;
-using Application.Middlewares.ConsoleLog;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +22,7 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

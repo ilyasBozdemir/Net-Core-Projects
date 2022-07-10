@@ -1,4 +1,4 @@
-﻿using Infrastructure.Enums;
+﻿using Domain.Enums;
 using Microsoft.AspNetCore.Identity;
 
 
