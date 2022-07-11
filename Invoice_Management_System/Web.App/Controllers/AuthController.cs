@@ -32,8 +32,7 @@ namespace Web.App.Controllers
 
         //[Authorize(Roles = OperationClaims.Anonymous)]
         public IActionResult Register() => View();
-
-
+        
         [HttpPost, /*Authorize(Roles = OperationClaims.Anonymous)*/]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(SignUpViewModel viewModel)
@@ -48,19 +47,24 @@ namespace Web.App.Controllers
                 var user = new AppUser
                 {
                     UserName = viewModel.UserName,
-                    Name = viewModel.Name,
-                    Surname = viewModel.Surname,
+                    FirstName = viewModel.FirstName,
+                    LastName = viewModel.LastName,
                     PasswordHash = Encoding.ASCII.GetString(passwordHash),
                     PasswordSalt = Encoding.ASCII.GetString(passwordSalt),
                     PhoneNumber = viewModel.PhoneNumber,
                     Email = viewModel.Email,
+                    NormalizedEmail = viewModel.Email.ToUpper(),
                     Gender = viewModel.Gender,
                     BirthDay = viewModel.BirthDay,
-                    TwoFactorType = Domain.Enums.TwoFactorType.None,
+                    TwoFactorType = viewModel.TwoFactorType,
                     CreatedOn = DateTime.UtcNow,
+                    SecurityStamp = Guid.NewGuid().ToString("D"),
+                    EmailConfirmed = false,
+                    PhoneNumberConfirmed = false,
+                    IsActive = false
 
                 };
-
+              
                 var result = await _userManager.CreateAsync(user, viewModel.Password);
 
                 if (result.Succeeded)

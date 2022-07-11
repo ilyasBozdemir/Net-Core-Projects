@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Context;
@@ -18,11 +20,12 @@ namespace Persistence.Extensions.DbInitializer
 
             using var scope = app.ApplicationServices.CreateScope();
             var services = scope.ServiceProvider;
+
             try
             {
                 var context = services.GetRequiredService<IMSDbContext>();
                 context.Database.Migrate();
-                DbInitializer.Initialize(context);
+                DbInitializer.Initialize(context, services);
             }
             catch (Exception ex)
             {

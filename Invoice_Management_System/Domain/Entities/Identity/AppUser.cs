@@ -27,19 +27,19 @@ namespace Domain.Entities.Identity
             set;
         }
         
-        public string Name
+        public string FirstName
         {
             get; 
             set;
         }
-        public string Surname
+        public string LastName
         {
             get;
             set;
         }
         public string FullName 
         {
-            get => $"{Name} {Surname}";
+            get => $"{FirstName} {LastName}";
         }
         public string PasswordSalt 
         { 

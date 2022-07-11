@@ -15,6 +15,7 @@ namespace Persistence.Mapping
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.Property(x => x.ConcurrencyStamp).IsConcurrencyToken();
         }
     }
 }

@@ -1,10 +1,13 @@
 ﻿using Application.Interfaces.Context;
+using Core.Utilities.Security.Hashing;
 using Domain.Common;
 using Domain.Entities;
 using Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Mapping;
+using System.Text;
 
 namespace Persistence.Context
 {
@@ -53,6 +56,55 @@ namespace Persistence.Context
             modelBuilder.ApplyConfiguration(new LogMap());
             modelBuilder.ApplyConfiguration(new ResidentMap());
             modelBuilder.ApplyConfiguration(new UserMap());
+            //
+            modelBuilder.Entity<AppUser>(); //AspNetUsers
+            modelBuilder.Entity<IdentityRole>(); //AspNetRoles
+            modelBuilder.Entity<IdentityUserRole<Guid>>(); //AspNetUserRole
+            modelBuilder.Entity<IdentityUserClaim<Guid>>(); //AspNetUserClaim
+            modelBuilder.Entity<IdentityUserLogin<Guid>>(); //AspNetUserLogin
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>(); //AspNetRoleClaim
+            modelBuilder.Entity<IdentityUserToken<Guid>>(); //AspNetUserToken
+            //
+            const string ADMIN_ID = "be175bf2-9a15-4708-89b4-15b57f3bfeda",
+                         ROLE_ID = "979488cb-5c01-4c55-9a18-30f71b5acf35",
+                         USER_PASSWORD= "Bozdemir.12345";
+            byte[] passwordHash, passwordSalt;
+
+            AppUser appUser = new()
+            {
+                Id = Guid.Parse(ADMIN_ID),
+                FirstName = "ilyas",
+                LastName = "Bozdemir",
+                Email = "bozdemir.ib70@gmail.com",
+                NormalizedEmail = "BOZDEMIR.IB70@GMAIL.COM",
+                UserName = "Bozdemir.ilyas",
+                NormalizedUserName = "BOZDEMIR.ILYAS",
+                PhoneNumber = "+90 546 546 45 64",//random
+                EmailConfirmed = true,
+                PhoneNumberConfirmed = true,
+                ConcurrencyStamp = "",
+                SecurityStamp = Guid.NewGuid().ToString("D")
+            };
+            HashingHelper.
+                CreatePasswordHash(USER_PASSWORD, out passwordHash, out passwordSalt);
+            appUser.PasswordHash = Encoding.ASCII.GetString(passwordHash);
+            appUser.PasswordSalt  = Encoding.ASCII.GetString(passwordSalt);
+
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Name = "Admin",
+                NormalizedName = "ADMIN",
+                Id = ROLE_ID
+            });
+
+            modelBuilder.Entity<AppUser>().HasData(appUser);
+
+            modelBuilder.Entity<IdentityUserRole<Guid>>()
+                .HasData(new IdentityUserRole<Guid>
+                {
+                    RoleId = Guid.Parse(ROLE_ID),
+                    UserId = Guid.Parse(ADMIN_ID)
+                });
 
             base.OnModelCreating(modelBuilder);
         }
