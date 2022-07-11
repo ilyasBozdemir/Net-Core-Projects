@@ -1,13 +1,13 @@
-﻿
-using Application.Utilities.Results;
+﻿using Application.Utilities.Results;
 using Application.ViewModels.Auth;
-using System.Threading.Tasks;
+using Domain.Entities.Identity;
 
 namespace Application.Interfaces.Services
 {
     public interface IAuthService
     {
         IResult CreateUser(SignUpViewModel viewModel);
+        //bool ExistUser(AppUser appUser);
         //IResult Login();
         //IResult TwoFactorLogin();
         //IResult ChangePassword();
