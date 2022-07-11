@@ -16,7 +16,7 @@ namespace Persistence.Mapping
         {
             builder.HasKey(ow => new { ow.InvoiceId, ow.UserId });
             builder.HasOne<Invoice>().WithMany().HasForeignKey(x => x.InvoiceId);
-            builder.HasOne<User>().WithMany().HasForeignKey(x => x.UserId);
+            builder.HasOne<AppUser>().WithMany().HasForeignKey(x => x.UserId);
         }
     }
 }

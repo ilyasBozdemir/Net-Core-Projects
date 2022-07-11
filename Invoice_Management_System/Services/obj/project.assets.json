@@ -2088,6 +2088,7 @@
           "Microsoft.AspNet.Mvc": "5.2.9",
           "Microsoft.AspNetCore.Http": "2.2.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.2",
           "Microsoft.AspNetCore.Razor": "2.2.0",
           "Microsoft.Extensions.Configuration": "7.0.0-preview.5.22301.12",

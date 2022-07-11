@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xFe1QIg3mhm1AQStqv7pAblzfQF/btS/jm9JIMhz5UFnGBwo5P3541oUskUYCXq258+XdnAXoTMIclp+Q/fdSQ==",
+  "dgSpecHash": "0yxfZO0z+5jfYKf5M42Uc7yf+CnHk9P4SpnfgHC8u48zR/OdtoUBpSWWqpkoPvi70eCU1zVUfQeMyqXrTT2ljg==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.9\\microsoft.aspnet.webpages.3.2.9.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
@@ -31,6 +32,7 @@
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.2.0\\microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.2\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.2.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.5\\microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512",

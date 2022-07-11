@@ -15,7 +15,7 @@ namespace Application.Utilities.Security.Jwt
             Configuration = _Configuration;
         }
 
-        public Token CreateAccessToken(User user)
+        public Token CreateAccessToken(AppUser user)
         {
             Token tokenModel = new Token();
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Token:SecurityKey"]));
@@ -45,7 +45,7 @@ namespace Application.Utilities.Security.Jwt
             return Guid.NewGuid().ToString();
         }
 
-        private IEnumerable<Claim> SetClaims(User user)
+        private IEnumerable<Claim> SetClaims(AppUser user)
         {
             var claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));

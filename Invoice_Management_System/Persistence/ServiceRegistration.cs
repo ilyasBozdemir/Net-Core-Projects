@@ -19,7 +19,7 @@ namespace Persistence
                 (options => options.UseSqlServer(DbConfiguration.ConnectionString));
 
 
-            serviceCollection.AddIdentity<User, Role>(options =>
+            serviceCollection.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = true;

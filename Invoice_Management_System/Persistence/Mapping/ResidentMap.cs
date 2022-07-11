@@ -10,7 +10,7 @@ namespace Persistence.Mapping
         public void Configure(EntityTypeBuilder<Resident> builder)
         {
             builder.HasKey(x => x.UserId);
-            builder.HasOne<User>().WithOne().HasForeignKey<Resident>(x => x.UserId);
+            builder.HasOne<AppUser>().WithOne().HasForeignKey<Resident>(x => x.UserId);
             builder.HasOne<House>().WithMany().HasForeignKey(x => x.HouseId);
         }
     }

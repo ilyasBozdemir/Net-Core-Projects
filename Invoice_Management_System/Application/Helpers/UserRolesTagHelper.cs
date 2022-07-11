@@ -8,9 +8,9 @@ namespace Application.Helpers
     [HtmlTargetElement("td", Attributes = "asp-roles")]
     public class UserRolesTagHelper : TagHelper
     {
-        private readonly UserManager<User> _userManager;
+        private readonly UserManager<AppUser> _userManager;
 
-        public UserRolesTagHelper(UserManager<User> userManager)
+        public UserRolesTagHelper(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
         }

@@ -9,12 +9,12 @@ using Persistence.Mapping;
 namespace Persistence.Context
 {
     //public class IMSDbContext : DbContext , IIMSDbContext
-    public class IMSDbContext : IdentityDbContext<User, Role, Guid>, IIMSDbContext
+    public class IMSDbContext : IdentityDbContext<AppUser, AppRole, Guid>, IIMSDbContext
     {
         public IMSDbContext(DbContextOptions options) 
             : base(options) {}
         public DbSet<Log> Logs { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<AppUser> Users { get; set; }
         public DbSet<Apartment> Apartments { get; set; }
         public DbSet<ApartmentType> ApartmentTypes { get; set; }
         public DbSet<House> Houses { get; set; }

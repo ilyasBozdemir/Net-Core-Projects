@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Persistence.Mapping
 {
-    public class UserMap : IEntityTypeConfiguration<User>
+    public class UserMap : IEntityTypeConfiguration<AppUser>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<AppUser> builder)
         {
             builder.HasKey(x => x.Id);
         }

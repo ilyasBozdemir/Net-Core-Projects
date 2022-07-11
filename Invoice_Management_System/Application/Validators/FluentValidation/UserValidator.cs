@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Validators.FluentValidation
 {
-    public class UserValidator : AbstractValidator<User>
+    public class UserValidator : AbstractValidator<AppUser>
     {
         public UserValidator()
         {

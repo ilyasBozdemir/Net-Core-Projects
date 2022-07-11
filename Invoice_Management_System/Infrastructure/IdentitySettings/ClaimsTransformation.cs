@@ -12,9 +12,9 @@ namespace Infrastructure.IdentitySettings
 {
     public class ClaimsTransformation : IClaimsTransformation
     {
-        private readonly UserManager<User> _userManager;
+        private readonly UserManager<AppUser> _userManager;
 
-        public ClaimsTransformation(UserManager<User> userManager)
+        public ClaimsTransformation(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
         }

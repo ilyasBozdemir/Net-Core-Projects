@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.IdentitySettings.Validators
 {
-    public class PasswordValidator : IPasswordValidator<User>
+    public class PasswordValidator : IPasswordValidator<AppUser>
     {
-        public Task<IdentityResult> ValidateAsync(UserManager<User> manager, User user, string password)
+        public Task<IdentityResult> ValidateAsync(UserManager<AppUser> manager, AppUser user, string password)
         {
             var errors = new List<IdentityError>();
 

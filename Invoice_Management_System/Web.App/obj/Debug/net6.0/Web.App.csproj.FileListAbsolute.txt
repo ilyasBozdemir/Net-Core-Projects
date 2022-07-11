@@ -1,9 +1,17 @@
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Web.App.exe
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.csproj.AssemblyReference.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.AssemblyInfoInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.AssemblyInfo.cs
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.csproj.CoreCompileInputs.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.MvcApplicationPartsAssemblyInfo.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.RazorAssemblyInfo.cache
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.RazorAssemblyInfo.cs
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\log4net.config
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\appsettings.Development.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\appsettings.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\appsettings.Production .json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Web.App.staticwebassets.runtime.json
+D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Web.App.exe
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Web.App.deps.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Web.App.runtimeconfig.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Web.App.dll
@@ -293,15 +301,6 @@ D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debu
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Infrastructure.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Persistence.pdb
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\bin\Debug\net6.0\Services.pdb
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.csproj.AssemblyReference.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.GeneratedMSBuildEditorConfig.editorconfig
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.AssemblyInfoInputs.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.AssemblyInfo.cs
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.csproj.CoreCompileInputs.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.MvcApplicationPartsAssemblyInfo.cs
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.MvcApplicationPartsAssemblyInfo.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.RazorAssemblyInfo.cache
-D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\Web.App.RazorAssemblyInfo.cs
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\staticwebassets.build.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\staticwebassets.development.json
 D:\GitHub\PatikaApp\Net-Core-Projects\Invoice_Management_System\Web.App\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
