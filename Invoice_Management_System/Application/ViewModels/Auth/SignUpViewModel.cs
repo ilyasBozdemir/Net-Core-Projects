@@ -13,6 +13,7 @@ namespace Application.ViewModels.Auth
         public string Name { get; set; } = default!;
         public string Surname { get; set; } = default!;
         public string Email { get; set; } = default!;
+        public string PhoneNumber { get; set; }
         public Gender Gender { get; set; } = Gender.Unknown;
         public DateTime BirthDay { get; set; }
         public string Password { get; set; } = default!;

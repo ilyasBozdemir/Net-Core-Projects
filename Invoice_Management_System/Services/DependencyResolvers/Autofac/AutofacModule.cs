@@ -3,7 +3,7 @@ using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.AspNetCore.Http;
-using Services.Abstracts;
+using Application.Interfaces.Services;
 using Services.Concretes;
 
 namespace Services.DependencyResolvers.Autofac

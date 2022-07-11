@@ -21,7 +21,7 @@ namespace Domain.Entities.Identity
         public DateTime CreatedOn { get; set; }
      
 
-        public long CitizenId //vatandaşlık id
+        public long? CitizenId //vatandaşlık id
         {
             get;
             set;

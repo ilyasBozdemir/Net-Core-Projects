@@ -6,5 +6,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum TwoFactorType { None, Sms, Email, Authenticator }
+    public enum TwoFactorType
+    {
+        None,
+        Sms,
+        Email,
+        Microsoft_Authenticator,
+        Google_Authenticator,
+        My_Authenticator/*kendimin yazacağı Authenticator(Doğrulayıcı) servisi*/
+    }
 }

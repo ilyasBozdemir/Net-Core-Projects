@@ -1,9 +1,9 @@
-﻿using Application.ViewModels.Apartment;
+﻿using Application.Interfaces.Services;
+using Application.ViewModels.Apartment;
 using AutoMapper;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Abstracts;
 
 namespace Web.App.Controllers
 {

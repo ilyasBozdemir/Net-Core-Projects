@@ -21,7 +21,7 @@
                         <span asp-validation-for="VerificationCode" class="text-danger"></span>
                     </div>
 
-                    @if (Model?.TwoFactorType == TwoFactorType.Authenticator)
+                    @if (Model?.TwoFactorType == TwoFactorType.Google_Authenticator)
                     {
                         <div class="form-group">
                             <input asp-for="IsRecoveryCode" type="checkbox" />

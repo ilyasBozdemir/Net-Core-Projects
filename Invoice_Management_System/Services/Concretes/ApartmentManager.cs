@@ -8,7 +8,7 @@ using Core.Aspects.Autofac.Logging;
 using Core.Aspects.Autofac.Validation;
 using Domain.Entities;
 using Infrastructure.Messages.Messages;
-using Services.Abstracts;
+using Application.Interfaces.Services;
 
 namespace Services.Concretes
 {

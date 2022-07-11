@@ -1,7 +1,7 @@
 ﻿using Application.Utilities.Results;
 using Domain.Entities;
 
-namespace Services.Abstracts
+namespace Application.Interfaces.Services
 {
     public interface IApartmentService
     {
