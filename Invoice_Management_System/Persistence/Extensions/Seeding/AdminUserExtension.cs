@@ -12,7 +12,6 @@ namespace Persistence.Extensions.Seeding
         {
             const string USER_1 = "be175bf2-9a15-4708-89b4-15b57f3bfeda",
                          USER_2 = "979488cb-5c01-4c55-9a18-30f71b5acf35",
-                         USER_3 = "e63797f7-ac88-42d2-85e7-b027632af8f1",
                          USER_PASSWORD = "testUserSecurityKey";
 
             byte[] passwordHash, passwordSalt;
