@@ -1,12 +1,13 @@
 ﻿using Application.Utilities.Results;
 using Application.ViewModels.Auth;
 using Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
 
 namespace Application.Interfaces.Services
 {
     public interface IAuthService
     {
-        IResult CreateUser(SignUpViewModel viewModel);
+       // Task<IdentityResult> CreateAsync(SignUpViewModel viewModel);
         //bool ExistUser(AppUser appUser);
         //IResult Login();
         //IResult TwoFactorLogin();
