@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Persistence.Context;
 using System.Text;
 
-namespace Persistence.Extensions.DbInitializer
+namespace Persistence.Extensions.Seeding
 {
     public class DbInitializer
     {

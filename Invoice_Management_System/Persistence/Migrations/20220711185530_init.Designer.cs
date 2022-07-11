@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence.Context;
 
@@ -11,9 +12,10 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(IMSDbContext))]
-    partial class IMSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220711185530_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -235,58 +237,6 @@ namespace Persistence.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("e514ca9b-bdd4-4464-9b87-ae21e5c02d6b"),
-                            AccessFailedCount = 0,
-                            BirthDay = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "e020dece-3721-483f-8bcf-f4bcbe1f0fb2",
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "bozdemir.ib70@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "ilyas",
-                            Gender = 0,
-                            IsActive = true,
-                            LastName = "Bozdemir",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "BOZDEMIR.IB70@GMAIL.COM",
-                            NormalizedUserName = "BOZDEMIR.ILYAS",
-                            PasswordHash = "+??S\n?b??Sb???Q????e?sn?=?o,?k??s?cE??E/s?0??v3A??R\\?h3?M?",
-                            PasswordSalt = "L?7}i+MI??KckP????$???c-9f????O1{u,0r*??J??\nm?D^49????Q???%?}{??G`?(o???mV??????????T??oqw????@??1C????d?k?#??Biix",
-                            PhoneNumber = "+90 546 546 45 64",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "bcd499f9-0e72-4293-944c-e4b5c05bf3f9",
-                            TwoFactorEnabled = false,
-                            TwoFactorType = 0,
-                            UserName = "Bozdemir.ilyas"
-                        },
-                        new
-                        {
-                            Id = new Guid("30b61b08-e79e-4409-809f-3dff0f5e1a95"),
-                            AccessFailedCount = 0,
-                            BirthDay = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "38f9ccee-155a-4880-993f-dadfde01614b",
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "test@xx.com",
-                            EmailConfirmed = true,
-                            FirstName = "test user",
-                            Gender = 0,
-                            IsActive = true,
-                            LastName = "user test",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "TEST@XX.COM",
-                            NormalizedUserName = "TEST.USER",
-                            PasswordHash = "+??S\n?b??Sb???Q????e?sn?=?o,?k??s?cE??E/s?0??v3A??R\\?h3?M?",
-                            PasswordSalt = "L?7}i+MI??KckP????$???c-9f????O1{u,0r*??J??\nm?D^49????Q???%?}{??G`?(o???mV??????????T??oqw????@??1C????d?k?#??Biix",
-                            PhoneNumber = "+90 546 546 45 65",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "27041456-5c12-4679-b37f-8be9c62feacd",
-                            TwoFactorEnabled = false,
-                            TwoFactorType = 0,
-                            UserName = "test.user"
-                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Invoice", b =>
@@ -451,36 +401,6 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("IdentityRole");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "45a79c9a-8ae9-4472-9a15-0295579a081e",
-                            ConcurrencyStamp = "b20ec6ac-9bb5-4837-97ef-8d89cf2d59cc",
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        },
-                        new
-                        {
-                            Id = "f66e5184-7125-43a7-8266-557924286dc5",
-                            ConcurrencyStamp = "e59e2bb5-244f-436f-8191-37b84de2b09c",
-                            Name = "Coach",
-                            NormalizedName = "COACH"
-                        },
-                        new
-                        {
-                            Id = "c6a9d2c3-af3a-4c9a-8634-07b901e7ead7",
-                            ConcurrencyStamp = "794cfcad-e8ee-4c1d-93eb-27b12b113bbd",
-                            Name = "Swimmer",
-                            NormalizedName = "SWIMMER"
-                        },
-                        new
-                        {
-                            Id = "812fd059-45b0-497f-92de-8386a43ebcb7",
-                            ConcurrencyStamp = "6c586b8c-c36c-4bb2-90fe-ac3bf80bf005",
-                            Name = "Visitor",
-                            NormalizedName = "VISITOR"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -565,18 +485,6 @@ namespace Persistence.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = new Guid("e514ca9b-bdd4-4464-9b87-ae21e5c02d6b"),
-                            RoleId = new Guid("45a79c9a-8ae9-4472-9a15-0295579a081e")
-                        },
-                        new
-                        {
-                            UserId = new Guid("30b61b08-e79e-4409-809f-3dff0f5e1a95"),
-                            RoleId = new Guid("f66e5184-7125-43a7-8266-557924286dc5")
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>

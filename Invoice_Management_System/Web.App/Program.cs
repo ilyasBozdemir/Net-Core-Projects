@@ -6,7 +6,7 @@ using Autofac.Extensions.DependencyInjection;
 using Services.DependencyResolvers.Autofac;
 using System.Reflection;
 using Services;
-using Persistence.Extensions.DbInitializer;
+using Persistence.Extensions.Seeding;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);

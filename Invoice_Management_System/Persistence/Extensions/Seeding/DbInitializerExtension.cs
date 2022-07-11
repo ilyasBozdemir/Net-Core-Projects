@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistence.Extensions.DbInitializer
+namespace Persistence.Extensions.Seeding
 {
     public static class DbInitializerExtension
     {
