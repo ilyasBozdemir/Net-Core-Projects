@@ -33,8 +33,12 @@
   <ItemGroup>
     <Folder Include="CrossCuttingConcerns\Logging\Serilog\" />
     <Folder Include="CrossCuttingConcerns\Logging\NLog\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Exceptions\" />
     <Folder Include="Interfaces\Storage\Azure\" />
     <Folder Include="Interfaces\Storage\Local\" />
+    <Folder Include="Validations\FluentValidation\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Wrappers\" />
   </ItemGroup>
 

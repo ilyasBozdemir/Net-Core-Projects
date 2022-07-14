@@ -19,14 +19,14 @@ namespace Application
 
             //services.AddScoped<IValidator<ApartmentType>, ApartmentValidator>();
 
-            services.AddValidatorsFromAssemblyContaining<ApartmentValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<ApartmentTypeValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<HouseValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<InvoicePaymentValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<InvoiceTypeValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<InvoiceValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<ResidentValidator>(ServiceLifetime.Transient);
-            services.AddValidatorsFromAssemblyContaining<UserValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<ApartmentValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<ApartmentTypeValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<HouseValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<InvoicePaymentValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<InvoiceTypeValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<InvoiceValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<ResidentValidator>(ServiceLifetime.Transient);
+            //services.AddValidatorsFromAssemblyContaining<UserValidator>(ServiceLifetime.Transient);
 
             // 
 

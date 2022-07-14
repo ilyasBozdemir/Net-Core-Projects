@@ -11,15 +11,12 @@ using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddApplicationServices(builder.Configuration); 
 builder.Services.AddBusinessServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
-
-builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
@@ -37,42 +34,29 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage(); 
     app.UseItToSeedSqlServer();
 }
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() == false)
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
-   
-//app.UseConsoleLogMiddleware();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseHttpsRedirection();
-
 app.UseSession();
 
-//app.Use(async (context, next) =>
-//{
-//    var token = context.Session.GetString("Token");
-//    if (!string.IsNullOrEmpty(token))
-//    {
-//        context.Request.Headers.Add("Authorization", "Bearer " + token);
-//    }
-//    await next();
-//});
-
-app.UseStatusCodePages(async context => {
+app.UseStatusCodePages(context =>
+{
     var request = context.HttpContext.Request;
     var response = context.HttpContext.Response;
 
     if (response.StatusCode == (int)HttpStatusCode.Unauthorized)
-    {
         response.Redirect("/Auth/Login");
-    }
+
     else if (response.StatusCode == (int)HttpStatusCode.Forbidden)
-    {
         response.Redirect("/Home/Forbidden");
-    }
+
+    return Task.CompletedTask;
 });
 
 
@@ -88,15 +72,11 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
-        name: "Default",
-      //pattern: "{controller=Auth}/{action=Login}/{id?}");
-      pattern: "{controller=Home}/{action=Index}/{id?}");
-
+        name: "Default", 
+        pattern: "{controller=Home}/{action=Index}/{id?}");
 
     endpoints.MapControllerRoute(
-      name: "areas",
-      pattern: "{area:exists}/{controller=Auth}/{action=Login}/{id?}"
-
-    );
+        name: "areas", 
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 });
 app.Run();

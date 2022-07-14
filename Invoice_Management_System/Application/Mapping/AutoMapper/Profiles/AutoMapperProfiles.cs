@@ -15,6 +15,7 @@ namespace Application.Mapping.AutoMapper.Profiles
             CreateMap<Domain.Entities.Product, GetProductByIdViewModel>()
                 .ReverseMap();
             */
+
         }
     }
 }
