@@ -9,8 +9,8 @@ builder.Services.AddCors();
 
 string corsUrl = builder.Configuration["Cors:site"];
 string[] corsUrls;
-if (corsUrl.Contains(","))
-    corsUrls = corsUrl.Split(',').ToArray();
+if (corsUrl.Contains(";"))
+    corsUrls = corsUrl.Split(';').ToArray();
 else
 {
     corsUrls = new string[1];

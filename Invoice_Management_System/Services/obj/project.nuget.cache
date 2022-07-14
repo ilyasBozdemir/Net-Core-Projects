@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/iusv5ayDldv9C759UIyeMNMGa2DdKvyt4BPonEhR8emDoKzoXk9nvYXgiz74fAftNsmpj4mMWQ55gh4C2edng==",
+  "dgSpecHash": "WPT5FXB8PJfa8op3KiCu2GuWtVoWHWiWOiNAnPqgO02fDWHlsyJxWEQOK6Q84hyjmqHsOMPbz8KoYD51SYszzw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Services\\Services.csproj",
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\29.06\\12,07\\Invoice_Management_System\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.1\\autofac.extras.dynamicproxy.6.0.1.nupkg.sha512",

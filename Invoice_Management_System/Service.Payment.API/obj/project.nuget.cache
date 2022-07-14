@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dVT1W14uwgmLe4gvGHsPJ7uNmAp02oxCW41iYrXvI8bLL9zUJRaMDKU8R7G8xNXuNKdbaYAu5XVqIzV6DVnaBQ==",
+  "dgSpecHash": "tnHNeZUqDHzyInjDyHx29FSsVdZPSc35Vb/aDcYR7herwWB1JY1ImBvFXgocBJ3A953JWKhpf8Y74w7vFzy8Jg==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj",
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\29.06\\12,07\\Invoice_Management_System\\Service.Payment.API\\Service.Payment.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

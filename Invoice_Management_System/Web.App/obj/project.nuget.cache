@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4HNmSXrKP3cNbLNAYrEuJ2G1QEwF9gRHthHlCXFg6e2NSYCAA4ArZ/KVo9NMfuPxcSSmv8S1aUM/uP1tfbWxYA==",
+  "dgSpecHash": "wZq1RF+w7Hm+DCuuvvuEJSs+KHdUg3PvpzAXQTmSP66lDQIlTz+sEqmHoT0N6TaB5299+gDXsK/xb4zUmp75ZQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Web.App\\Web.App.csproj",
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\29.06\\12,07\\Invoice_Management_System\\Web.App\\Web.App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vNS0fuOc/Nfas8w8TNINfAWVawuOSw7IWesIjKwFHCsgGbIxzw8OvbJjG0efJ3JsvXL3+RneFPgF5dZz0ltZcg==",
+  "dgSpecHash": "k6t85AFyTpQ4E7P750CBewCp5pRtYpS514qo++ENndwctzYbAblCeJdndlK4eIFcq/iwtOR6AdcgPLsjhMDNCw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PatikaApp\\Net-Core-Projects\\Invoice_Management_System\\Persistence\\Persistence.csproj",
+  "projectFilePath": "D:\\GitHub\\PatikaApp\\29.06\\12,07\\Invoice_Management_System\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\BozdemirHome\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.1\\autofac.extras.dynamicproxy.6.0.1.nupkg.sha512",
