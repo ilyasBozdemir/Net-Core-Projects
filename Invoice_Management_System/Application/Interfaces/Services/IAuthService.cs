@@ -1,5 +1,4 @@
 ﻿using Application.Utilities.Results;
-using Application.ViewModels.Auth;
 using Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 

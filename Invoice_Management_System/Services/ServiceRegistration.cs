@@ -41,7 +41,7 @@ namespace Services
 
             serviceCollection.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            serviceCollection.AddTransient<IApartmentService, ApartmentManager>();
+            //serviceCollection.AddTransient<IApartmentService, ApartmentManager>();
 
             serviceCollection.AddTransient<IAuthService, AuthManager>();
 

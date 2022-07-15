@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-
 using FluentValidation;
-using Application.Validators.FluentValidation;
 using Core.CrossCuttingConcerns.Caching.Microsoft;
 using Core.CrossCuttingConcerns.Caching;
 using Microsoft.AspNetCore.Http;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum TwoFactorType
+    public enum TwoFactorType : byte
     {
         None,
         Sms,

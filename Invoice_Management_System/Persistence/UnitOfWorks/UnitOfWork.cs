@@ -10,7 +10,7 @@ namespace Persistence.UnitOfWorks
     {
         private readonly IMSDbContext _context;
 
-        private EfApartmentRepository _apartments;
+       // private EfApartmentRepository _apartments;
         //private EfApartmentTypeRepository _apartmentTypes;
         //private EfHouseRepository _houses;
         //private EfInvoicePaymentRepository _invoicePayments;
@@ -19,8 +19,8 @@ namespace Persistence.UnitOfWorks
         //private EfLogRepository _logs;
         //private EfResidentRepository _residents;
         //private EfUserRepository _users;
-        IApartmentRepository IUnitOfWork.Apartments
-                   => _apartments ?? new(_context);
+        //IApartmentRepository IUnitOfWork.Apartments
+           //        => _apartments ?? new(_context);
         //IHouseRepository IUnitOfWork.Houses 
         //    => _houses ?? new (_context);
        

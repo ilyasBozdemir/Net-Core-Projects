@@ -6,5 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum Gender : byte { Unknown, Male, Female }
+    public enum MesajTuru : byte
+    {
+        Oneri = 2,
+        Sikayet = 4,
+        İstek = 8
+    }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using static Domain.Common.IEntity;
 namespace Domain.Common
 {
     public class BaseEntity: IEntity
@@ -13,8 +8,8 @@ namespace Domain.Common
         public virtual DateTime OlusturmaTarihi { get; set; } = DateTime.Now;
         public virtual DateTime? GuncellemeTarihi { get; set; }
 
-        public event IEntity.EntityDeletedEvent Deleted;
-        public event IEntity.EntityInsertedEvent Inserted;
-        public event IEntity.EntityDeletedEvent Updated;
+        public event EntityDeletedEvent? Deleted;
+        public event EntityInsertedEvent? Inserted;
+        public event EntityDeletedEvent? Updated;
     }
 }

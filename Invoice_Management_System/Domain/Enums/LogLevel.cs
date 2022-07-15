@@ -6,5 +6,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum Gender : byte { Unknown, Male, Female }
+    public enum LogLevel : byte
+    {
+        Trace,
+        Debug,
+        Information,
+        Warning,
+        Error,
+        Critical
+    }
 }

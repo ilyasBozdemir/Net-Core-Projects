@@ -10,7 +10,7 @@ namespace Application.Interfaces.UnitOfWork
 {
     public interface IUnitOfWork: IAsyncDisposable
     {
-        public IApartmentRepository Apartments { get; }
+        //public IApartmentRepository Apartments { get; }
 
         //public IApartmentTypeRepository ApartmentTypes { get; }
         //public IHouseRepository Houses { get; }

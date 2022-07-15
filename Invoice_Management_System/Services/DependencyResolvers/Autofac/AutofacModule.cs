@@ -3,8 +3,6 @@ using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.AspNetCore.Http;
-using Application.Interfaces.Services;
-using Services.Concretes;
 
 namespace Services.DependencyResolvers.Autofac
 {
@@ -13,7 +11,7 @@ namespace Services.DependencyResolvers.Autofac
         protected override void Load(ContainerBuilder builder)
         {
 
-            builder.RegisterType<ApartmentManager>().As<IApartmentService>();
+           // builder.RegisterType<ApartmentManager>().As<IApartmentService>();
             builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
