@@ -27,6 +27,7 @@ namespace Persistence.Extensions.Seeding
             //  Logs Users Apartments ApartmentTypes  Houses Residents Invoices InvoiceTypes InvoicePayment
 
             // seeding
+
         }
     }
 }

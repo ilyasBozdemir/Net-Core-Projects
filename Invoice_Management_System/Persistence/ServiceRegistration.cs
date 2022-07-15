@@ -1,5 +1,4 @@
-﻿using Application.Repositories;
-using Domain.Entities.Identity;
+﻿using Domain.Entities.Identity;
 using Infrastructure.IdentitySettings;
 using Infrastructure.IdentitySettings.Validators;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +15,9 @@ namespace Persistence
         public static void AddPersistenceServices(this IServiceCollection serviceCollection, IConfiguration Configuration = null)
         {
             serviceCollection.AddDbContext<IMSDbContext>
-                (options => options.UseSqlServer(DbConfiguration.ConnectionString));
+                (options => options.UseSqlServer(
+                    DbConfiguration.ConnectionString,
+                b => b.MigrationsAssembly("Persistence")));
 
 
             serviceCollection.AddIdentity<AppUser, AppRole>(options =>
