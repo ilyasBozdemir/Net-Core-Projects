@@ -8,8 +8,8 @@ namespace Domain.Enums
 {
     public enum MesajTuru : byte
     {
-        Oneri = 2,
-        Sikayet = 4,
-        İstek = 8
+        Oneri = 0,
+        Sikayet,
+        İstek
     }
 }

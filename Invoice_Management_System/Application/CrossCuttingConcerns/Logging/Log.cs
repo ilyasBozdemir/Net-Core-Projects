@@ -1,26 +1,12 @@
 ﻿using Domain.Common;
+using Domain.Enums;
 
 namespace Application.CrossCuttingConcerns.Logging
 {
     public class Log : BaseEntity
     {
-        private DateTime dateTime;
-
-        public DateTime DateTime
-        {
-            get { return dateTime; }
-            set { dateTime = DateTime.Now; }
-        }
-        public override Guid Id 
-        { 
-            get; set;
-        }
-        public override DateTime UpdatedDate 
-        { 
-            get => base.UpdatedDate;
-            set => base.UpdatedDate = value; 
-        }
+        public LogLevel LogLevel { get; set; }
         public string Message { get; set; }
-
+        public string IpAdresi { get; set; }
     }
 }
