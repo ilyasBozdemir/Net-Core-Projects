@@ -6,7 +6,7 @@ namespace Domain.Entities
     public class User : BaseEntity
     {      
         public long? CitizenId { get; set; }
-        public string RoleName { get; set; }
+        public string RoleName { get; set; } = Enum.GetName(UserRoles.Uye);
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string ProfilePictures { get; set; }

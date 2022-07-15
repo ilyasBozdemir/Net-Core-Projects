@@ -44,7 +44,7 @@ namespace Persistence
 
             serviceCollection.AddScoped<DbInitializer>();
 
-            serviceCollection.AddScoped<IApartmentRepository, EfApartmentRepository>();
+            //serviceCollection.AddScoped<IApartmentRepository, EfApartmentRepository>();
 
 
         }

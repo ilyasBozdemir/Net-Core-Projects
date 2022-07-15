@@ -35,36 +35,36 @@ namespace Persistence.Extensions.Seeding
             // Crear USERS
             List<AppUser> users = new List<AppUser>() {
                 new AppUser {
-                    Id=Guid.Parse(USER_1),
-                    FirstName = "ilyas",
-                    LastName = "Bozdemir",
-                    Email = "bozdemir.ib70@gmail.com",
-                    NormalizedEmail = "BOZDEMIR.IB70@GMAIL.COM",
-                    UserName = "Bozdemir.ilyas",
-                    NormalizedUserName = "BOZDEMIR.ILYAS",
-                    PhoneNumber = "+90 546 546 45 64",//random
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
-                    ConcurrencyStamp = Guid.NewGuid().ToString("D"),
-                    SecurityStamp = Guid.NewGuid().ToString("D"),
-                    PasswordHash = Encoding.ASCII.GetString(passwordHash),
-                    PasswordSalt = Encoding.ASCII.GetString(passwordSalt)
+                    //Id=Guid.Parse(USER_1),
+                    //FirstName = "ilyas",
+                    //LastName = "Bozdemir",
+                    //Email = "bozdemir.ib70@gmail.com",
+                    //NormalizedEmail = "BOZDEMIR.IB70@GMAIL.COM",
+                    //UserName = "Bozdemir.ilyas",
+                    //NormalizedUserName = "BOZDEMIR.ILYAS",
+                    //PhoneNumber = "+90 546 546 45 64",//random
+                    //EmailConfirmed = true,
+                    //PhoneNumberConfirmed = true,
+                    //ConcurrencyStamp = Guid.NewGuid().ToString("D"),
+                    //SecurityStamp = Guid.NewGuid().ToString("D"),
+                    //PasswordHash = Encoding.ASCII.GetString(passwordHash),
+                    //PasswordSalt = Encoding.ASCII.GetString(passwordSalt)
                 },
                 new AppUser {
-                    Id=Guid.Parse(USER_2),
-                    FirstName = "test user",
-                    LastName = "user test",
-                    Email = "test@xx.com",
-                    NormalizedEmail = "TEST@XX.COM",
-                    UserName = "test.user",
-                    NormalizedUserName = "TEST.USER",
-                    PhoneNumber = "+90 546 546 45 65",//random
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
-                    ConcurrencyStamp = Guid.NewGuid().ToString("D"),
-                    SecurityStamp = Guid.NewGuid().ToString("D"),
-                    PasswordHash = Encoding.ASCII.GetString(passwordHash),
-                    PasswordSalt = Encoding.ASCII.GetString(passwordSalt)
+                    //Id=Guid.Parse(USER_2),
+                    //FirstName = "test user",
+                    //LastName = "user test",
+                    //Email = "test@xx.com",
+                    //NormalizedEmail = "TEST@XX.COM",
+                    //UserName = "test.user",
+                    //NormalizedUserName = "TEST.USER",
+                    //PhoneNumber = "+90 546 546 45 65",//random
+                    //EmailConfirmed = true,
+                    //PhoneNumberConfirmed = true,
+                    //ConcurrencyStamp = Guid.NewGuid().ToString("D"),
+                    //SecurityStamp = Guid.NewGuid().ToString("D"),
+                    //PasswordHash = Encoding.ASCII.GetString(passwordHash),
+                    //PasswordSalt = Encoding.ASCII.GetString(passwordSalt)
                 }
             };
 
@@ -85,13 +85,6 @@ namespace Persistence.Extensions.Seeding
             modelBuilder.Entity<IdentityRole>().HasData(roles);
             modelBuilder.Entity<AppUser>().HasData(users);
             modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(userRoles);
-            /*
-             * The INSERT statement conflicted with the FOREIGN KEY constraint 
-             * "FK_AspNetUserRoles_AspNetRoles_RoleId".
-             * The conflict occurred in database "InvoiceManagementDB", table "dbo.AspNetRoles",
-             * column 'Id'.
-             * The statement has been terminated.
-             */
         }
     }
 }

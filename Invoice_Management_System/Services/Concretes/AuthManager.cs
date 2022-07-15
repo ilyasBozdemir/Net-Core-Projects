@@ -2,7 +2,6 @@
 using Application.Interfaces.Services;
 using Application.Interfaces.UnitOfWork;
 using Application.Utilities.Results;
-using Application.ViewModels.Auth;
 using AutoMapper;
 using Core.Utilities.Security.Hashing;
 using Domain.Entities.Identity;
