@@ -7,6 +7,7 @@ namespace Domain.Entities
         public long? CitizenId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string ProfilePictures { get; set; }
         public string FullName { get => $"{FirstName} {LastName}"; }
         public DateTime BirthDay { get; set; }
         public Gender Gender { get; set; }
