@@ -45,13 +45,13 @@ namespace Application.Utilities.Security.Jwt
             return Guid.NewGuid().ToString();
         }
 
-        private IEnumerable<Claim> SetClaims(AppUser user)
+        private IEnumerable<Claim> SetClaims(AppUser appUser)
         {
             var claims = new List<Claim>();
-            claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
-            claims.Add(new Claim(ClaimTypes.Name, $"{user.FullName}"));
-            //claims.Add(new Claim(ClaimTypes.Role, user.OperationClaim));
+            claims.Add(new Claim(ClaimTypes.NameIdentifier, appUser.Id.ToString()));
+            claims.Add(new Claim(JwtRegisteredClaimNames.Email, appUser.Email));
+            claims.Add(new Claim(ClaimTypes.Name, $"{appUser.UserInfo.FullName}"));
+            claims.Add(new Claim(ClaimTypes.Role, appUser.UserInfo.RoleName));
 
             return claims;
         }

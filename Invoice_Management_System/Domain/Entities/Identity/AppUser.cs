@@ -2,9 +2,8 @@
 
 namespace Domain.Entities.Identity
 {
-    public class AppUser: IdentityUser<Guid>
+    public class AppUser : IdentityUser<Guid>
     {
-        public User User { get; set; }
+        public User UserInfo { get; set; }
     }
-
 }
